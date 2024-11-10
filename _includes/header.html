@@ -3,7 +3,12 @@
     <a class="navbar-brand" href="/">Gymon</a>
 
     <ul class="nav justify-content-end">
+      <!-- Asigna una variable default_paths con la lista de paths de todas las páginas del sitio
       {%- assign default_paths = site.pages | map: "path" -%}
+
+       Asigna una variable page_paths con la lista de paths de páginas especificadas en site.header_pages
+      Si site.header_pages está vacío, utiliza default_paths como valor predeterminado
+
       {%- assign page_paths = site.header_pages | default: default_paths -%}
 
       {%- for path in page_paths -%}
@@ -14,6 +19,12 @@
           </li>
         {%- endif -%}
       {%- endfor -%}
+-->
+      <li class="nav-item">
+        <a class="nav-link" href="/about/">
+          <i></i> Nosotros
+        </a>
+      </li>
 
       <li class="nav-item">
         <a class="nav-link" href="https://stairwaycl.github.io/blog/" target="_blank">
