@@ -1,0 +1,26 @@
+<header class="navbar navbar-expand-lg" style="background-color: #FBFBFB;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Gymon</a>
+
+    <ul class="nav justify-content-end">
+      {%- assign default_paths = site.pages | map: "path" -%}
+      {%- assign page_paths = site.header_pages | default: default_paths -%}
+
+      {%- for path in page_paths -%}
+        {%- assign my_page = site.pages | where: "path", path | first -%}
+        {%- if my_page.title -%}
+          <li class="nav-item">
+            <a class="nav-link" href="{{ my_page.url }}">{{ my_page.title | escape }}</a>
+          </li>
+        {%- endif -%}
+      {%- endfor -%}
+
+      <li class="nav-item">
+        <a class="nav-link" href="https://stairway.github.io/blog" target="_blank">
+          <i class="fas fa-newspaper"></i> Blog
+        </a>
+      </li>
+
+    </ul>
+  </div>
+</header>
