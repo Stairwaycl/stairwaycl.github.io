@@ -1,7 +1,7 @@
 ---
-layout: default
+layout: about
 title: Nosotros
-permalink: /about/
+permalink: /about
 ---
 
 # Gatica y Mongelós SpA
