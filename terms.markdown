@@ -1,11 +1,11 @@
 ---
-layout: default
-title: terms
+layout: terms
+title: Términos y condiciones
 permalink: /terms/
 ---
 
 # Términos y Condiciones
-Última actualización: 31 de octubre de 2024
+Última actualización: 9 Febrero de 2025
 
 ## 1. Introducción
 
