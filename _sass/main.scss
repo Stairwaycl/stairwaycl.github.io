@@ -1,0 +1,36 @@
+.current {
+  color: red;
+}
+
+.highlight-area {
+  background-color:rgb(209, 188, 209)
+}
+
+h1 {
+  text-align:center;
+}
+
+.logo-gallery {
+  /* 1. Activate Flexbox on the container */
+  display: flex;
+
+  /* 2. Arrange items horizontally (default is 'row') */
+  flex-direction: row;
+
+  /* 3. The key for responsiveness: Allow items to wrap to the next line
+     if the screen is too small (e.g., on mobile) */
+  flex-wrap: wrap;
+
+  /* 4. Optional: Add consistent space between images */
+  gap: 10px;
+
+  /* Optional: Center the entire group of logos horizontally */
+  justify-content: center;
+}
+
+/* Optional: Small adjustments for the images themselves */
+.gallery-item {
+  /* Ensures the image doesn't get distorted when resizing */
+  max-width: 100%;
+  height: auto;
+}
