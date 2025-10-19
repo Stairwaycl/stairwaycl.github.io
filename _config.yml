@@ -56,7 +56,7 @@ defaults:
     values:
       layout: "default"
   - scope:
-      path: "assets/images"
+      path: "assets/images/logos"
     values:
       image: true
 
