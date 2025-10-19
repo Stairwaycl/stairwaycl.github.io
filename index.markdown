@@ -5,7 +5,6 @@
 layout: default
 title: Diseños Originales de Logotipos | Gatica y Mongelos SpA
 description: "Creamos logos memorables. Diseño profesional, enfoque único y derechos de autor reservados para tu marca."
-image: /assets/images/favicon.ico
 ---
 
 
