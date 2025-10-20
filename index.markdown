@@ -20,8 +20,7 @@ description: "Diseño profesional de Imagotipos, Isologos e Isotipos. Entregamos
   </div>
 </section>
 
-## Muestra de Diseños Exclusivos (Portafolio)
-
+## Prediseños
 <div class="logo-gallery">
   {% assign image_files = site.static_files | where: "image", true %}
   {% for myimage in image_files %}
