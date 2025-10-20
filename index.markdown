@@ -3,10 +3,12 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: default
-title: Diseños Originales de Logotipos | Gatica y Mongelos SpA
-description: "Creamos logos memorables. Diseño profesional, enfoque único y derechos de autor reservados para tu marca."
+# --- CAMBIOS DE SEO EN FRONT MATTER ---
+# 1. Título más específico
+title: Diseño de Logotipos Profesionales, Isotipos y Marcas | Stairway SpA
+# 2. Descripción más profesional
+description: "Diseño profesional de Imagotipos, Isologos e Isotipos. Entregamos archivos SVG y vectoriales editables con derechos de autor. ¡Empieza tu marca hoy!"
 ---
-
 
 <section class="hero-section text-center pt-5 pb-5">
   <div class="container">
@@ -18,7 +20,7 @@ description: "Creamos logos memorables. Diseño profesional, enfoque único y de
   </div>
 </section>
 
-# Prediseños
+## Muestra de Diseños Exclusivos (Portafolio)
 
 <div class="logo-gallery">
   {% assign image_files = site.static_files | where: "image", true %}
@@ -35,7 +37,7 @@ description: "Creamos logos memorables. Diseño profesional, enfoque único y de
 
 <section id="servicios" class="py-5">
         <div class="container text-center">
-            <h2 class="display-5 fw-bold mb-5 pt-5">Más que un Dibujo: Diseñamos Marcas con Estrategia</h2>
+            <h2 class="display-5 fw-bold mb-5 pt-5">Más que un Logo: Creamos Identidad</h2>
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="icon-box">
@@ -64,7 +66,7 @@ description: "Creamos logos memorables. Diseño profesional, enfoque único y de
 <section id="planes-promo" class="py-5  container ">
   <div class="container text-center pb-5 rounded-4 " style="background-color: #e1e1e1;">
       <h2 class="display-5 fw-bold mb-5 text-primary pt-4">¡PROMOCIÓN LANZAMIENTO! Precios Exclusivos</h2>
-      <p class="lead mb-5 text-danger fw-bold">Precios válidos por tiempo limitado para los primeros clientes. ¡Aprovecha el valor vectorial!</p>
+      <p class="lead mb-5 text-danger fw-bold">Precios válidos por tiempo limitado. ¡Aprovecha el valor de una Identidad de Marca completa y versátil!</p>
 
       <div class="row g-4 justify-content-center">
 
@@ -76,11 +78,9 @@ description: "Creamos logos memorables. Diseño profesional, enfoque único y de
                   <div class="card-body">
                       <h1 class="card-title pricing-card-title text-success">$9.990<small class="text-muted fw-light">/pago único</small></h1>
                       <ul class="list-unstyled mt-3 mb-4 text-start mx-3">
-                          <li>✅ Diseño de logo (1 propuesta).</li>
-                          <li>✅ Entrega en **JPG listo para SII** (< 10KB).</li>
+                          <li>✅ Diseño de logo (1 propuesta con revisión).</li>
+                          <li>✅ Entrega en <strong>JPG listo para SII</strong> (&lt; 10KB).</li>
                           <li>✅ Archivo PNG (Fondo transparente).</li>
-                          <li class="text-muted">❌ No incluye archivos vectoriales editables.</li>
-                          <li class="text-muted">❌ No incluye archivos vectoriales editables.</li>
                       </ul>
                       <a href="https://m.me/106648708512872" class="w-100 btn btn-lg btn-outline-success">Lo Necesito Ahora</a>
                   </div>
@@ -95,11 +95,11 @@ description: "Creamos logos memorables. Diseño profesional, enfoque único y de
                   <div class="card-body">
                       <h1 class="card-title pricing-card-title text-primary">$19.990<small class="text-muted fw-light">/pago único</small></h1>
                       <ul class="list-unstyled mt-3 mb-4 text-start mx-3">
-                          <li>✅ **Diseño 100% Original a la Medida.**</li>
-                          <li>✅ **Archivos Vectoriales Editables** (PDF, EPS, SVG).</li>
-                          <li>✅ Múltiples formatos rasterizados (JPG, PNG).</li>
+                          <li>✅ <strong>Diseño 100% Original de Imagotipo a la Medida.</strong></li>
+                          <li>✅ <strong>Entrega Completa del Isotipo (Símbolo) y Logotipo (Texto).</strong></li>
+                          <li>✅ <strong>Archivos Vectoriales Editables</strong> (PDF, EPS, SVG).</li>
                           <li>✅ Máxima calidad para web e impresión.</li>
-                          <li>✅ Incluye soporte post-entrega básico.</li>
+                          <li>✅ <strong>Manual Básico de Uso</strong> (Colores, Tipografía).</li>
                       </ul>
                       <a href="https://m.me/106648708512872" class="w-100 btn btn-lg btn-primary">¡El más Popular!</a>
                   </div>
@@ -115,7 +115,7 @@ description: "Creamos logos memorables. Diseño profesional, enfoque único y de
                       <h1 class="card-title pricing-card-title text-secondary">$14.990<small class="text-muted fw-light">/pago único</small></h1>
                       <ul class="list-unstyled mt-3 mb-4 text-start mx-3">
                           <li>✅ Convierte tu imagen actual a vectores.</li>
-                          <li>✅ **Archivos Vectoriales Editables** (PDF, EPS, SVG).</li>
+                          <li>✅ <strong>Archivos Vectoriales Editables</strong> (PDF, EPS, SVG).</li>
                           <li>✅ Tu logo escalará sin perder calidad.</li>
                           <li><br></li>
                           <li><br></li>
