@@ -20,12 +20,15 @@ description: "Diseño profesional de Imagotipos, Isologos e Isotipos. Entregamos
   </div>
 </section>
 
-## Prediseños
-<div class="logo-gallery">
+<div class="container">
+  <h2 class="text-center">Prediseños</h2>
+
+  <div class="logo-gallery">
   {% assign image_files = site.static_files | where: "image", true %}
   {% for myimage in image_files %}
     <img class="gallery-item" src="{{ myimage.path }}" alt="{{ myimage.name }}">
   {% endfor %}
+  </div>
 </div>
 
 <section class="py-4">
