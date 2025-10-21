@@ -1,0 +1,14 @@
+<nav>
+  <a href="/blog.html" class="favicon-link">
+    <img src="{{ site.baseurl }}/assets/images/logo.svg" alt="Logo" class="favicon-img">
+    <b class="lavishly-yours-regular">Blog Stairway</b>
+  </a>
+
+  <a href="/"
+    {% if page.url == '/' or page.url == '/index.html' %}
+      class="current"
+    {% endif %}>
+    Home
+  </a>
+
+</nav>

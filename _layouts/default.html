@@ -22,8 +22,12 @@
 {% seo %}
 
 </head>
-<body class="highlight-area">
-  {% include navigation.html %}
+<body class="highlight-area{% if page.url == '/blog.html' or page.layout == 'post' %} blog-background-gris{% endif %}">
+  {% if page.url == '/blog.html' or page.layout == 'post' %}
+    {% include navigation-blog.html %}
+  {% else %}
+    {% include navigation.html %}
+  {% endif %}
   <div class="container">
     {{ content }}
   </div>

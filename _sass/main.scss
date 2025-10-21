@@ -7,20 +7,28 @@
 }
 
 .highlight-area {
-  background-color: rgb(209, 188, 209); /* Color de respaldo */
+  background-color: #ff5454c7; /* Color de respaldo */
 
-  background-image: radial-gradient(
-    circle at center,          /* Dirección: Un círculo desde el centro */
-    #FFFFFF 0%,                /* Blanco Puro muy brillante en el centro */
-    rgb(220, 200, 220) 40%,    /* Un lila más claro alrededor del centro */
-    rgb(209, 188, 209) 100%    /* Tu color lila original en los bordes */
-  );
+  background-image:radial-gradient(circle at center, #2763eb8f 0%, #00cd41ad 40%, #d1bcd1 100%);
   min-height: 100vh;
 }
 
+.blog-background-gris {
+  background-color: rgb(209, 188, 209); /* Color de respaldo */
+
+  background-image: radial-gradient(
+    circle at right,          /* Dirección: Un círculo desde el centro */
+    #FFFFFF 0%,                /* Blanco Puro muy brillante en el centro */
+    rgb(220, 200, 220) 40%,    /* Un lila más claro alrededor del centro */
+    #ffc4ff 100%    /* Tu color lila original en los bordes */
+  );
+  min-height: 100vh;
+}
 h1 {
   text-align:center;
 }
+
+
 
 /* ---------------------------------------------------- */
 /* ESTILOS DE LA GALERÍA (FONDO TRANSPARENTE) */
