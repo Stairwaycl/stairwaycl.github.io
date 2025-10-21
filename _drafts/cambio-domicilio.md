@@ -3,9 +3,10 @@ layout: post
 author: erwin
 title: Cambio de Domicilio para oficina virtual en SII
 ---
-I strongly recommend against using any `<blink>` tags.
 
-I wish SmartyPants used named entities like
+    afds
+
+    I wish SmartyPants used named entities like
 
 Guía Esencial - ¡No te equivoques con el RUT ni el monto!
 
