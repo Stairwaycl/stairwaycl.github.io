@@ -13,13 +13,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap" rel="stylesheet">
 
-<link rel="icon" href="assets/images/logo.svg" type="image/x-icon">
+<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
 {% if jekyll.environment == "production" %}
   <script src="my-analytics-script.js"></script>
 {% endif %}
 
 {% feed_meta %}
-{% seo %}
+{% seo %} <!--- Este plugin se encarga automáticamente de generar los meta tags Open Graph (para Facebook y WhatsApp, entre otros) y Twitter Cards, siempre y cuando hayas configurado correctamente la información en tu _config.yml y en el front matter de tus posts. -->
 
 <meta name="google-site-verification" content="lBIgVfsUr5F_T_KrfOJzzkxCTZBnMIrNPw-J1tvUKHA" />
 

@@ -9,7 +9,7 @@ title: About
 {% for author in site.authors %}
   <lu>
     <h2> {{ author.name }} </h2>
-    <h3> {{ author.position }} </h3>
+    <h4> {{ author.position }} </h4>
     <p> {{ author.content | markdownify }} </p>
   </lu>
 {% endfor %}
