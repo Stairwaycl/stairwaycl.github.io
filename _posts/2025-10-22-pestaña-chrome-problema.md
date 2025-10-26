@@ -3,7 +3,7 @@ layout: post
 title: Chrome "Se Vuelve Loco" al Redimensionar en Ubuntu
 author: erwin
 date: 2025-10-22
-tags: [ubuntu, gnome, chrome, aceleracion, bug, fix]
+tag: ubuntu
 image: /assets/images/posts/penguin-chrome.png
 ---
 

@@ -3,7 +3,6 @@ layout: post
 author: erwin
 ---
 {% raw %}
-
 No más database, moderación para comentarios o molestas actualizaciones, sólo tu ocntenido. Sencillo. Funciona con Markdown, Liquid, HTML;CSS. Puede utilizarse Github Free como hosting sin problemas, con su dominio personalizado incluido.
 
 En la sección docs, encontraremos cómo usarlo.
@@ -27,12 +26,11 @@ objects
 filters
 
 Objetos
+Los objetos indican a Liquid que muestre variables predefinidas como contenido en una página. Use llaves dobles para los objetos:
 
-</h3>Los objetos indican a Liquid que muestre variables predefinidas como contenido en una página. Use llaves dobles para los objetos:
+Etiquetas
 
-Etiquetas</h3>
-
-Las etiquetas definen la lógica y el flujo de control de las plantillas. Use llaves y signos de porcentaje para las etiquetas: {%y %}.
+Las etiquetas definen la lógica y el flujo de control de las plantillas. Use llaves y signos de porcentaje para las etiquetas: ```{%y %}```.
 
 Por ejemplo:
 
@@ -534,7 +532,7 @@ La respuesta corta es: No, assign no es una condición, es una etiqueta de asign
 Aquí tienes la explicación detallada de cada concepto:
 1. ¿Es  una condición?
 No, assign no es una condición, sino una Etiqueta (Tag) de Asignación.
-En Liquid, las Etiquetas (Tags) ({% ... %}) definen la lógica y el flujo de control para las plantillas1.
+En Liquid, las Etiquetas (Tags) ```({% ... %})```definen la lógica y el flujo de control para las plantillas1.
 • Asignación (assign): El propósito de la etiqueta {% assign ... %} es crear una nueva variable y asignarle un valor, generalmente el resultado de un filtro2. En el caso que analizamos:
 • Aquí, assign está creando la variable filtered_posts y guardando en ella una lista filtrada de publicaciones2.
 • Condición (if): Las condiciones se manejan con la etiqueta {% if ... %}3. Esta etiqueta evalúa una prueba booleana (verdadero o falso) para determinar qué contenido debe mostrarse3. Por ejemplo, se usa una condición para resaltar la página actual en la navegación:
@@ -582,7 +580,7 @@ Para que Jekyll comience a procesar la "magia" de Liquid en cualquier archivo, n
 • Al incluir variables como layout: default6 o title: Home3, estás dando instrucciones específicas a Jekyll para que aplique plantillas o defina contenido automáticamente.
 2. Los Componentes del Hechizo (Liquid)
 Liquid, el lenguaje de plantillas que usa Jekyll, es el que permite que los archivos se comporten de forma dinámica a pesar de generar un sitio estático7. Sus componentes son los verdaderos "hechizos" lógicos:
-• Tags ({% %}) (La Lógica del Flujo): Estas etiquetas definen el flujo de control8. Un ejemplo de "hechizo" complejo es cuando usas {% for item in site.data.navigation %} para iterar sobre todos los elementos de tu menú, en lugar de escribirlos manualmente9. O cuando usas un {% if page.url == item.link %} para aplicar una clase, ejecutando una condición1011.
+• Tags ```({% %})```(La Lógica del Flujo): Estas etiquetas definen el flujo de control8. Un ejemplo de "hechizo" complejo es cuando usas {% for item in site.data.navigation %} para iterar sobre todos los elementos de tu menú, en lugar de escribirlos manualmente9. O cuando usas un {% if page.url == item.link %} para aplicar una clase, ejecutando una condición1011.
 • Filters (|) (La Transformación): Los filtros cambian la salida de un objeto8. Por ejemplo, el filtro | where: 'author', page.short_name12 es un "hechizo" de filtrado que ordena la colección completa de posts (site.posts) para mostrar solo aquellos que coinciden con un autor, haciendo que el listado sea instantáneo y automatizado.
 3. La "Magia" de la Organización Estructural
 Las características de Jekyll que hacen que la codificación sea menos repetitiva son el resultado de esta lógica programática:
