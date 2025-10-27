@@ -10,7 +10,10 @@ Para comenzar con Jekyll, siga el [tutorial oficial](https://jekyllrb.com/docs/)
 
 Abra su terminal y genere un nuevo proyecto:
 
-```bundle exec jekyll new```
+<div class="highlight">
+  bundle exec jekyll new
+
+
 
 Si quiere hacer un blog, necesitará agregar un archivo ```"_draft"``` en la raíz del proyecto, como se enseña en la documentación de Jekyll [posts/#drafts](https://jekyllrb.com/docs/posts/#drafts)
 
@@ -24,3 +27,6 @@ Ir a la terminal en el proyecto y ejecutar:
 ```bundle```
 
 Luego, agregar en ```head``` en el ```default``` del ```layout``` del proyecto el CDN
+
+
+Si se quiere agregar imagenes o pdf se usa ```[]{}```
