@@ -8,3 +8,4 @@ vendor/
 # Archivos específicos a ignorar
 precios.html
 firma2.html
+_includes/footer.html

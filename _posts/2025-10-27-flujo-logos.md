@@ -1,6 +1,9 @@
+---
+layout: post
+tag: design
+---
 
-
-<h1>Flujo de Trabajo Profesional: De Diseño Minimalista a Paquete de Venta</h1>
+<h1>1 Flujo de Trabajo Profesional: De Diseño Minimalista a Paquete de Venta</h1>
 <p>Resumen de una amplia conversación sobre herramientas y estrategias para diseñar, vectorizar y empaquetar logos como un producto digital de alta calidad, optimizado para el formato <span class="highlight">favicon (.ico)</span>.</p>
 
 <h2>El Flujo de Trabajo Ideal (4 Pasos)</h2>

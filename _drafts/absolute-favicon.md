@@ -2,8 +2,6 @@
 layout: post
 title: "¿Por qué desaparece mi Favicon en los Posts de Jekyll? La Solución de las Rutas Absolutas"
 date: 2025-10-22 10:00:00 -0300
-categories: [jekyll, webdev, tutorial]
-tags: [favicon, rutas, html, liquid]
 excerpt: Descubre la causa común por la que el favicon de tu sitio Jekyll deja de funcionar en las páginas de tus posts y cómo solucionarlo con una ruta absoluta o el filtro 'relative_url'.
 ---
 
