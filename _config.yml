@@ -27,6 +27,8 @@ url: "https://stairwaycl.github.io" # the base hostname & protocol for your site
 twitter_username:
 github_username:  stairwaycl
 
+social_image: /assets/images/office.png
+
 # Build settings
 theme: minima
 plugins:
