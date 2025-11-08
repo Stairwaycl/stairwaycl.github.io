@@ -23,7 +23,7 @@ image: true
   {% comment %}
   Iteramos sobre la lista 'logos' que cargamos de _data/cloudinary_logos.yml
   {% endcomment %}
-  {% assign logos_list = site.data.cloudinary_logos.logos %}
+  {% assign logos_list = site.data.cloudinary_logos.predesign %}
 
   {% for logo in logos_list %}
     <img class="gallery-item"

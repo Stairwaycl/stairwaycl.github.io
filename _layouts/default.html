@@ -28,9 +28,30 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap" rel="stylesheet">
 
-<link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+{% comment %} Accede al primer elemento de la lista 'favicon' ([0]) y luego a la clave 'url' {% endcomment %}
+{% assign favicon_url = site.data.cloudinary_logos.favicon[0].url %}
+
+<link rel="icon"
+      href="{{ favicon_url }}"
+      type="image/png">
+
 {% if jekyll.environment == "production" %}
   <script src="my-analytics-script.js"></script>
+{% endif %}
+
+{% comment %}
+  CONSTRUCCIÓN DE LA IMAGEN SOCIAL
+  Accedemos al primer elemento de la lista 'social_images' ([0]) para obtener la URL.
+{% endcomment %}
+{% assign social_img_url = site.data.cloudinary_logos.social_images[0].url %}
+
+{% comment %}
+  Inyectar la URL de Cloudinary en la variable 'page.image'.
+  El plugin jekyll-seo-tag prioriza 'page.image' para los meta tags 'og:image' y 'twitter:image'.
+{% endcomment %}
+
+{% if page.image == nil %}
+  {% assign page.image = social_img_url %}
 {% endif %}
 
 {% feed_meta %}

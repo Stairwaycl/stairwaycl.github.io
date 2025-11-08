@@ -27,7 +27,9 @@ url: "https://stairwaycl.github.io" # the base hostname & protocol for your site
 twitter_username:
 github_username:  stairwaycl
 
-social_image: /assets/images/office.png
+# Añade una variable para indicar dónde buscar la imagen principal
+# Esto es solo una referencia. El plugin SEO la buscará.
+main_social_image_id: stairway/rcoazxs2x7tq637crc2w
 
 # Build settings
 theme: null

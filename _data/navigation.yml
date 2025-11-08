@@ -1,6 +1,6 @@
 - name: Nosotros
   link: /about.html
 - name: Blog
-  link: /blog/index.html
+  link: /blog/
 - name: Staff
-  link: /blog/staff.html
+  link: /staff/
