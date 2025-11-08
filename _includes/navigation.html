@@ -1,0 +1,14 @@
+<nav>
+  <a href="/" class="favicon-link">
+    <img src="{{ site.baseurl }}/assets/images/favicon.ico" alt="Logo" class="favicon-img">
+    <b class="lavishly-yours-regular">Logos Stairway</b>
+  </a>
+
+  {% for item in site.data.navigation %}
+  <a href="{{ item.link }}"
+  {% if page.url == item.link %} class="current"{% endif %}>
+  {{ item.name }}
+</a>
+  {% endfor %}
+
+</nav>

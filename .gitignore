@@ -1,0 +1,10 @@
+# Directorios de compilación y caché
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata/
+vendor/
+
+# Archivos específicos a ignorar
+firma2.html
+upload.rb

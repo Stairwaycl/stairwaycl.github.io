@@ -1,0 +1,135 @@
+/* ---------------------------------------------------- */
+/* ESTILOS EXISTENTES DEL USUARIO */
+/* ---------------------------------------------------- */
+
+.current {
+  color: black;
+}
+
+.highlight-area {
+  background-color: rgb(209, 188, 209); /* Color de respaldo */
+
+  background-image: radial-gradient(
+    circle at center,          /* Dirección: Un círculo desde el centro */
+    #FFFFFF 0%,                /* Blanco Puro muy brillante en el centro */
+    rgb(220, 200, 220) 40%,    /* Un lila más claro alrededor del centro */
+    rgb(209, 188, 209) 100%    /* Tu color lila original en los bordes */
+  );
+  min-height: 100vh;
+}
+
+.blog-background-gris {
+  background-color: rgb(209, 188, 209); /* Color de respaldo */
+
+  background-image: radial-gradient(
+    circle at right,          /* Dirección: Un círculo desde el centro */
+    #FFFFFF 0%,                /* Blanco Puro muy brillante en el centro */
+    rgb(220, 200, 220) 40%,    /* Un lila más claro alrededor del centro */
+    #ffc4ff 100%    /* Tu color lila original en los bordes */
+  );
+  min-height: 100vh;
+}
+h1 {
+  text-align:center;
+}
+
+
+
+/* ---------------------------------------------------- */
+/* ESTILOS DE LA GALERÍA (FONDO TRANSPARENTE) */
+/* ---------------------------------------------------- */
+
+.logo-gallery {
+  /* Propiedades de Flexbox (Tus estilos originales) */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+
+  /* Aseguramos fondo transparente */
+  background-color: transparent;
+  position: static;
+  overflow: visible;
+  padding: 0;
+  border-radius: 0;
+}
+
+
+/* ---------------------------------------------------- */
+/* ESTILOS DE LOS LOGOS INDIVIDUALES CON BRILLO DORADO */
+/* ---------------------------------------------------- */
+
+.gallery-item {
+/* Fija el límite de ancho superior a 100px */
+max-width: 100px !important;
+
+/* Asegura que la imagen ocupe ese ancho si es menor a 100px */
+width: 100% !important;
+
+/* Esencial para NO distorsionar. Forzamos su aplicación. */
+height: auto !important;
+
+/* Anulamos cualquier 'object-fit' agresivo de frameworks */
+object-fit: contain !important;
+
+/* Propiedades de Transición */
+/* Importante: Aplicamos la transición a 'filter' y 'transform' para suavizar el efecto */
+transition: transform 0.3s ease, filter 0.3s ease;
+
+/* Establecemos el filtro inicial (para que tenga un tono dorado muy sutil) */
+filter: brightness(1) drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+
+cursor: pointer;
+}
+
+.gallery-item:hover {
+  /* 1. Efecto de Levantamiento (Tu idea original) */
+  transform: scale(1.1);
+
+  /* 2. Efecto de Brillo Dorado (Simulación de moneda de oro) */
+  /* Combina brillo y una sombra que simula el resplandor */
+  filter: brightness(1.1) /* Aumenta el brillo */
+          saturate(1.2)  /* Satura ligeramente el color para el "oro" */
+          drop-shadow(0 0 8px rgba(255, 215, 0, 0.7)); /* Sombra de resplandor dorado */
+}
+
+
+/* ---------------------------------------------------- */
+/* ESTILOS DE NAVEGACIÓN */
+/* ---------------------------------------------------- */
+nav {
+  /* Habilita Flexbox para alinear todos los elementos */
+  display: flex;
+  align-items: center; /* Alinea verticalmente al centro */
+}
+
+.favicon-link {
+  /* Para asegurarnos de que el logo se quede a la izquierda */
+  margin-right: auto;
+  display: flex; /* Asegura que la imagen esté bien alineada */
+  padding: 8px;
+  color:black;
+}
+
+.favicon-img {
+  /* Tamaño recomendado para un favicon en la barra de navegación */
+  width: 32px;
+  height: 32px;
+  /* Opcional: si quieres bordes redondeados */
+  // border-radius: 50%;
+}
+
+/* Estilos existentes para tus enlaces de navegación */
+nav a {
+  padding: 10px 15px;
+  text-decoration: none;
+  /* ... otros estilos ... */
+}
+
+.lavishly-yours-regular {
+  font-family: "Lavishly Yours", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+}

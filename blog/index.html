@@ -1,0 +1,74 @@
+---
+layout: default
+---
+<!---
+<ul class="nav">
+  <li class="nav-item">
+    <a href="/blog/tutorials/design" class="nav-link">Diseño Gráfico</a>
+  </li>
+</ul>
+-->
+<h1>
+  Blog
+</h1>
+
+
+<div class="row">
+{% for post in paginator.posts %}
+  <div class="col-md-6 mb-4">
+    <div class="card h-100">
+      <div class="card-body" style="background-color: #edc3c3;">
+        <h5 class="card-title">{{ post.title }}</h5>
+        <p class="card-text">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+
+        <a href="{{ post.url | relative_url }}" class="btn btn-primary">
+          Leer artículo completo
+        </a>
+      </div>
+
+      <div class="card-footer text-muted">
+        Publicado el {{ post.date | date: "%Y-%m-%d" }}
+      </div>
+    </div>
+  </div>
+{% endfor %}
+</div>
+{% if paginator.total_pages > 1 %}
+<div class="row">
+  <div class="col-md-6 col-lg-4 mx-auto">
+    <nav aria-label="Navegación de publicaciones">
+
+      <ul class="pagination justify-content-center">
+
+        <li class="page-item {% unless paginator.previous_page %}disabled{% endunless %}">
+          <a class="page-link"
+             href="{{ paginator.previous_page_path | relative_url }}">
+             &laquo;
+          </a>
+        </li>
+
+        {% for page in (1..paginator.total_pages) %}
+          <li class="page-item {% if page == paginator.page %}active{% endif %}">
+            {% assign page_path = "/blog/" %}
+            {% if page > 1 %}
+              {% assign page_path = "/blog/page" | append: page %}
+            {% endif %}
+
+            <a class="page-link" href="{{ page_path | relative_url }}">
+              {{ page }}
+            </a>
+          </li>
+        {% endfor %}
+
+        <li class="page-item {% unless paginator.next_page %}disabled{% endunless %}">
+          <a class="page-link"
+             href="{{ paginator.next_page_path | relative_url }}">
+              &raquo;
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+  </div>
+</div>
+{% endif %}

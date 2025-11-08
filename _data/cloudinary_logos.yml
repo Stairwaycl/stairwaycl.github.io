@@ -1,0 +1,58 @@
+# _data/cloudinary_logos.yml
+
+logos:
+  - id: stairway/xumdbrj4jbih4fcm0hld
+    url: https://res.cloudinary.com/ddky4mrmg/image/upload/v1762629975/stairway/xumdbrj4jbih4fcm0hld.png
+    alt: Logo abstracto minimalista
+
+  - id: stairway/mowbckuedidlufduubad
+    url: https://res.cloudinary.com/ddky4mrmg/image/upload/v1762629977/stairway/mowbckuedidlufduubad.png
+    alt: Diseño de logotipo moderno
+
+  - id: stairway/rofrecixmxuzyua2kjyu
+    url: https://res.cloudinary.com/ddky4mrmg/image/upload/v1762629978/stairway/rofrecixmxuzyua2kjyu.png
+    alt: Isotipo de empresa
+
+  - id: stairway/fwaspzb05rikinett7b1
+    url: https://res.cloudinary.com/ddky4mrmg/image/upload/v1762629980/stairway/fwaspzb05rikinett7b1.png
+    alt: Isotipo de empresa
+
+  - id: stairway/lxmdmruih19coibtbi4o
+    url: https://res.cloudinary.com/ddky4mrmg/image/upload/v1762629982/stairway/lxmdmruih19coibtbi4o.png
+    alt: Isotipo de empresa
+
+# --- Procesando archivo 5/10: assets/images/logos/hogar.png ---
+# ✅ ¡Subida Exitosa!
+#   Carpeta usada: stairway
+#   Public ID:   stairway/lxmdmruih19coibtbi4o
+#   URL Segura:  https://res.cloudinary.com/ddky4mrmg/image/upload/v1762629982/stairway/lxmdmruih19coibtbi4o.png
+
+# --- Procesando archivo 6/10: assets/images/logos/libro-planta-ampolleta.png ---
+# ✅ ¡Subida Exitosa!
+#   Carpeta usada: stairway
+#   Public ID:   stairway/s5ewou0fbn56pxlkswao
+#   URL Segura:  https://res.cloudinary.com/ddky4mrmg/image/upload/v1762629984/stairway/s5ewou0fbn56pxlkswao.png
+
+# --- Procesando archivo 7/10: assets/images/logos/lktrigo.png ---
+# ✅ ¡Subida Exitosa!
+#   Carpeta usada: stairway
+#   Public ID:   stairway/rzmekmqj9s5pi7ixim6y
+#   URL Segura:  https://res.cloudinary.com/ddky4mrmg/image/upload/v1762629986/stairway/rzmekmqj9s5pi7ixim6y.png
+
+# --- Procesando archivo 8/10: assets/images/logos/llave-casa.png ---
+# ✅ ¡Subida Exitosa!
+#   Carpeta usada: stairway
+#   Public ID:   stairway/vtjp1w4g2hxu25otdeop
+#   URL Segura:  https://res.cloudinary.com/ddky4mrmg/image/upload/v1762629988/stairway/vtjp1w4g2hxu25otdeop.png
+
+# --- Procesando archivo 9/10: assets/images/office.png ---
+# ✅ ¡Subida Exitosa!
+#   Carpeta usada: stairway
+#   Public ID:   stairway/rcoazxs2x7tq637crc2w
+#   URL Segura:  https://res.cloudinary.com/ddky4mrmg/image/upload/v1762629990/stairway/rcoazxs2x7tq637crc2w.png
+
+# --- Procesando archivo 10/10: assets/images/favicon.ico ---
+# ✅ ¡Subida Exitosa!
+#   Carpeta usada: stairway
+#   Public ID:   stairway/t4llqs80obiu8axftxh5
+#   URL Segura:  https://res.cloudinary.com/ddky4mrmg/image/upload/v1762629991/stairway/t4llqs80obiu8axftxh5.ico
