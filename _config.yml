@@ -41,6 +41,7 @@ plugins:
 collections:
   authors:
     output: true
+
 defaults:
   # 1. VALORES PREDETERMINADOS PARA POSTS/AUTHORS (Tu config original)
   - scope:
