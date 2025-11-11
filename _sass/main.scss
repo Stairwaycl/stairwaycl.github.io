@@ -133,3 +133,10 @@ nav a {
   font-style: normal;
   font-size: 24px;
 }
+
+.gallery-item {
+  width: 100%;    /* Asegura que la imagen ocupe todo el ancho disponible */
+  height: auto;   /* Mantiene la proporción para evitar estiramiento vertical */
+  display: block; /* Ayuda a controlar el espaciado */
+  max-width: 800px; /* Si 800px es el ancho máximo de tu contenido */
+}

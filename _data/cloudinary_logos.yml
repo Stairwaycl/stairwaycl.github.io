@@ -1,44 +1,45 @@
 # _data/cloudinary_logos.yml
 
 predesign:
-  - id: stairway/xumdbrj4jbih4fcm0hld
-    url: https://res.cloudinary.com/ddky4mrmg/image/upload/v1762629975/stairway/xumdbrj4jbih4fcm0hld.png
-    alt: Logo abstracto minimalista
+  - id: stairway/saztolca2obesen06inl
+    url: https://res.cloudinary.com/ddky4mrmg/image/upload/v1762817094/stairway/saztolca2obesen06inl.png
+    alt: diversion
 
   - id: stairway/mowbckuedidlufduubad
-    url: https://res.cloudinary.com/ddky4mrmg/image/upload/v1762629977/stairway/mowbckuedidlufduubad.png
-    alt: Diseño de logotipo moderno
+    url: https://res.cloudinary.com/ddky4mrmg/image/upload/v1762817735/stairway/ypvobal6xsqx8sbpvn4z.png
+    alt: trigo
 
   - id: stairway/rofrecixmxuzyua2kjyu
-    url: https://res.cloudinary.com/ddky4mrmg/image/upload/v1762629978/stairway/rofrecixmxuzyua2kjyu.png
-    alt: Isotipo de empresa
+    url: https://res.cloudinary.com/ddky4mrmg/image/upload/v1762817733/stairway/uusw6shefxxlno11u8wk.png
+    alt: 7laws
 
   - id: stairway/fwaspzb05rikinett7b1
-    url: https://res.cloudinary.com/ddky4mrmg/image/upload/v1762629980/stairway/fwaspzb05rikinett7b1.png
-    alt: Isotipo de empresa
+    url: https://res.cloudinary.com/ddky4mrmg/image/upload/v1762817728/stairway/mdxctf7qs3eulktnvynz.png
+    alt: llave-casa
 
   - id: stairway/lxmdmruih19coibtbi4o
-    url: https://res.cloudinary.com/ddky4mrmg/image/upload/v1762629982/stairway/lxmdmruih19coibtbi4o.png
-    alt: Isotipo de empresa
+    url: https://res.cloudinary.com/ddky4mrmg/image/upload/v1762817726/stairway/jvcg7rpswaskpsv1obad.png
+    alt: libro-planta
 
   - id: stairway/s5ewou0fbn56pxlkswao
-    url: https://res.cloudinary.com/ddky4mrmg/image/upload/v1762629984/stairway/s5ewou0fbn56pxlkswao.png
-    alt: Isotipo de empresa
+    url: https://res.cloudinary.com/ddky4mrmg/image/upload/v1762817723/stairway/zdl6mfavubdx4mxysltu.png
+    alt: Hogar
 
   - id: stairway/rzmekmqj9s5pi7ixim6y
-    url: https://res.cloudinary.com/ddky4mrmg/image/upload/v1762629986/stairway/rzmekmqj9s5pi7ixim6y.png
-    alt: Isotipo de empresa
+    url: https://res.cloudinary.com/ddky4mrmg/image/upload/v1762817715/stairway/uxudtfktled9opyb8fwy.png
+    alt: gobierno
 
   - id: stairway/vtjp1w4g2hxu25otdeop
-    url: https://res.cloudinary.com/ddky4mrmg/image/upload/v1762629988/stairway/vtjp1w4g2hxu25otdeop.png
+    url: https://res.cloudinary.com/ddky4mrmg/image/upload/v1762817732/stairway/wdwy091uk6dmzo94sl99.png
+    alt: mundo
 
 
 social_image:
-  - id: stairway/rcoazxs2x7tq637crc2w
-    url: https://res.cloudinary.com/ddky4mrmg/image/upload/v1762629990/stairway/rcoazxs2x7tq637crc2w.png
+  - id: stairway/ecwhtlyccako0greenqe
+    url: https://res.cloudinary.com/ddky4mrmg/image/upload/v1762818484/stairway/ecwhtlyccako0greenqe.png
     alt: Imagen principal para redes sociales
 
 favicon:
   - id: stairway/t4llqs80obiu8axftxh5
-    url: https://res.cloudinary.com/ddky4mrmg/image/upload/v1762629991/stairway/t4llqs80obiu8axftxh5.ico
-    alt: Isotipo de empresa
+    url: https://res.cloudinary.com/ddky4mrmg/image/upload/v1762817721/stairway/u6ybuo6rego3vl40rl02.ico
+    alt: favicon

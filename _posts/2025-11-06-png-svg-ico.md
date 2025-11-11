@@ -6,7 +6,6 @@ description: "Descubra por qué su logo profesional necesita los formatos PNG, S
 tags: [diseño de logos, formatos de logo, SVG, PNG, ICO, favicon, diseño gráfico, Stairway]
 ---
 
-
 Un logo digital requiere al menos tres formatos clave para funcionar correctamente en todos los contextos. Cada uno tiene una misión específica:
 
 ### 1. El Archivo Maestro: SVG (Scalable Vector Graphics)

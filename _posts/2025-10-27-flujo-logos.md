@@ -6,22 +6,7 @@ title: "El Proceso de Calidad Superior de Logos Stairway"
 
 Nuestra metodología está diseñada para garantizar que su logo no solo sea visualmente atractivo, sino también una pieza de diseño atemporal, adaptable y de la más alta calidad técnica.
 
-{% comment %}
-  Cambiamos g_south a g_center (centro).
-  * w_800: Ancho de recorte (ajustar si la original es más ancha).
-  * h_200: Altura de recorte (ajustar a la mitad del alto original).
-  * c_fill: Modo de corte.
-  * g_center: Gravedad al centro (la porción central se mantiene visible).
-{% endcomment %}
-<figure class="text-center">
-  <img src="https://res.cloudinary.com/ddky4mrmg/image/upload/w_800,h_200,c_fill,g_center/v1762629990/stairway/rcoazxs2x7tq637crc2w.png"
-       alt="Imagen Principal Recortada al Centro"
-       class="img-fluid rounded shadow-sm"
-       height="auto">
-  <figcaption class="blockquote-footer mt-2">
-    Imagen referencial.
-  </figcaption>
-</figure>
+
 
 1.- **Diseño Estratégico y Calidad Minimalista**
 
