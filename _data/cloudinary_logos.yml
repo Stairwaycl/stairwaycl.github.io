@@ -1,6 +1,6 @@
 # _data/cloudinary_logos.yml
 
-predesign:
+isotype:
   - id: stairway/saztolca2obesen06inl
     url: https://res.cloudinary.com/ddky4mrmg/image/upload/v1762817094/stairway/saztolca2obesen06inl.png
     alt: diversion
@@ -21,13 +21,18 @@ predesign:
     url: https://res.cloudinary.com/ddky4mrmg/image/upload/v1762817726/stairway/jvcg7rpswaskpsv1obad.png
     alt: libro-planta
 
-  - id: stairway/s5ewou0fbn56pxlkswao
-    url: https://res.cloudinary.com/ddky4mrmg/image/upload/v1762817723/stairway/zdl6mfavubdx4mxysltu.png
-    alt: Hogar
+  # - id: stairway/s5ewou0fbn56pxlkswao
+  #   url: https://res.cloudinary.com/ddky4mrmg/image/upload/v1762817723/stairway/zdl6mfavubdx4mxysltu.png
+  #   alt: Hogar
 
   - id: stairway/rzmekmqj9s5pi7ixim6y
     url: https://res.cloudinary.com/ddky4mrmg/image/upload/v1762817715/stairway/uxudtfktled9opyb8fwy.png
     alt: gobierno
+
+imagotype:
+  - id: stairway/sgcysyunfo6vyngof4ac.png
+    url: https://res.cloudinary.com/ddky4mrmg/image/upload/v1763024048/stairway/sgcysyunfo6vyngof4ac.png
+    alt: financeglobe
 
   # - id: stairway/vtjp1w4g2hxu25otdeop
   #   url: https://res.cloudinary.com/ddky4mrmg/image/upload/v1762817732/stairway/wdwy091uk6dmzo94sl99.png

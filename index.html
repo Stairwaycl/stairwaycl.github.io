@@ -16,14 +16,14 @@ image: true
 </section>
 
 <div class="container">
-  <h2 class="text-center">Pre-designs</h2>
+  <h2 class="text-center">Our Portfolio</h2>
 
   <div class="logo-gallery">
 
   {% comment %}
   We iterate over the 'logos' list loaded from _data/cloudinary_logos.yml
   {% endcomment %}
-  {% assign logos_list = site.data.cloudinary_logos.predesign %}
+  {% assign logos_list = site.data.cloudinary_logos.isotype %}
 
   {% for logo in logos_list %}
     <img class="gallery-item"
@@ -31,6 +31,15 @@ image: true
          alt="{{ logo.alt }}">
   {% endfor %}
 
+
+  </div>
+  <div class="logo-gallery">
+    {% assign logos_list = site.data.cloudinary_logos.imagotype %}
+    {% for logo in logos_list %}
+    <img class="gallery-item2"
+         src="{{ logo.url }}"
+         alt="{{ logo.alt }}">
+  {% endfor %}
   </div>
 </div>
 

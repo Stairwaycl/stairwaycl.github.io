@@ -65,16 +65,16 @@ p {
 
 .gallery-item {
 /* Fija el límite de ancho superior a 100px */
-max-width: 100px !important;
+max-width: 100px;
 
 /* Asegura que la imagen ocupe ese ancho si es menor a 100px */
-width: 100% !important;
+width: 100%;
 
 /* Esencial para NO distorsionar. Forzamos su aplicación. */
-height: auto !important;
+height: auto;
 
 /* Anulamos cualquier 'object-fit' agresivo de frameworks */
-object-fit: contain !important;
+object-fit: contain;
 
 /* Propiedades de Transición */
 /* Importante: Aplicamos la transición a 'filter' y 'transform' para suavizar el efecto */
@@ -97,6 +97,39 @@ cursor: pointer;
           drop-shadow(0 0 8px rgba(255, 215, 0, 0.7)); /* Sombra de resplandor dorado */
 }
 
+.gallery-item2 {
+  /* Fija el límite de ancho superior a 100px */
+  max-width: 180px;
+
+  /* Asegura que la imagen ocupe ese ancho si es menor a 100px */
+  width: 100%;
+
+  /* Esencial para NO distorsionar. Forzamos su aplicación. */
+  height: auto;
+
+  /* Anulamos cualquier 'object-fit' agresivo de frameworks */
+  object-fit: contain;
+
+  /* Propiedades de Transición */
+  /* Importante: Aplicamos la transición a 'filter' y 'transform' para suavizar el efecto */
+  transition: transform 0.3s ease, filter 0.3s ease;
+
+  /* Establecemos el filtro inicial (para que tenga un tono dorado muy sutil) */
+  filter: brightness(1) drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+
+  cursor: pointer;
+  }
+
+  .gallery-item2:hover {
+    /* 1. Efecto de Levantamiento (Tu idea original) */
+    transform: scale(1.1);
+
+    /* 2. Efecto de Brillo Dorado (Simulación de moneda de oro) */
+    /* Combina brillo y una sombra que simula el resplandor */
+    filter: brightness(1.1) /* Aumenta el brillo */
+            saturate(1.2)  /* Satura ligeramente el color para el "oro" */
+            drop-shadow(0 0 8px rgba(255, 215, 0, 0.7)); /* Sombra de resplandor dorado */
+  }
 
 /* ---------------------------------------------------- */
 /* ESTILOS DE NAVEGACIÓN */
