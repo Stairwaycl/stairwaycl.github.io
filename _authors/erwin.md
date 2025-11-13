@@ -1,11 +1,11 @@
 ---
 short_name: erwin
 name: Erwin Gatica
-position: Cofundador y Director Creativo y de Desarrollo Web (CCO & CDW)
+position: Co-founder and Creative and Web Development Director (CCO & CDW)
 ---
 
-Erwin es diseñador que da vida a las marcas en Stairway SpA. Como Cofundador y Director Creativo y de Desarrollo Web, él es el artífice que transforma ideas en identidades visuales impactantes y plataformas digitales funcionales.
+Erwin is the designer who brings brands to life at Stairway SpA. As Co-founder and Creative and Web Development Director, he is the architect who transforms ideas into impactful visual identities and functional digital platforms.
 
-Su rol principal es la conceptualización y el desarrollo de logos memorables, trabajando en colaboración con su esposa Mirtha para capturar la esencia de cada negocio. Además, es el responsable de la arquitectura y el desarrollo de nuestras páginas web, garantizando que la presencia en línea de cada cliente sea técnicamente robusta y optimizada.
+His main role is the conceptualization and development of memorable logos, working in collaboration with his wife Mirtha to capture the essence of each business. Furthermore, he is responsible for the architecture and development of our websites, ensuring that each client's online presence is technically robust and optimized.
 
-Junto a Mirtha, codirige la estrategia de la empresa, asegurando que la excelencia en el diseño y la solidez del desarrollo web sean la promesa central de Stairway SpA, complementando el blog de tecnología asociado.
+Together with Mirtha, he co-directs the company's strategy, ensuring that excellence in design and solid web development are the central promise of Stairway SpA, complementing the associated technology blog.

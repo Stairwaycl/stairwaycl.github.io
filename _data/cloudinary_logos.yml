@@ -29,9 +29,9 @@ predesign:
     url: https://res.cloudinary.com/ddky4mrmg/image/upload/v1762817715/stairway/uxudtfktled9opyb8fwy.png
     alt: gobierno
 
-  - id: stairway/vtjp1w4g2hxu25otdeop
-    url: https://res.cloudinary.com/ddky4mrmg/image/upload/v1762817732/stairway/wdwy091uk6dmzo94sl99.png
-    alt: mundo
+  # - id: stairway/vtjp1w4g2hxu25otdeop
+  #   url: https://res.cloudinary.com/ddky4mrmg/image/upload/v1762817732/stairway/wdwy091uk6dmzo94sl99.png
+  #   alt: mundo
 
 
 social_image:

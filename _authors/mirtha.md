@@ -1,10 +1,10 @@
 ---
 short_name: mirtha
 name: Mirtha Mongelós
-position: Cofundadora y Directora de Estrategia Digital y Cliente (CSDO)
+position: Co-founder and Director of Digital Strategy and Client (CSDO)
 ---
-Mirtha Mongelós es el motor estratégico que impulsa la visibilidad y el crecimiento de Stairway SpA.
+Mirtha Mongelós is the strategic engine that drives the visibility and growth of Stairway SpA.
 
-Junto al equipo fundador, Mirtha codirige la estrategia de posicionamiento de la marca y participa activamente en el proceso creativo de diseño. Ella es la experta encargada de transformar nuestros diseños de logos en campañas cautivadoras que resuenan en las redes sociales y atraen a la audiencia adecuada.
+Together with the founding team, Mirtha co-directs the brand positioning strategy and actively participates in the creative design process. She is the expert in charge of transforming our logo designs into captivating campaigns that resonate on social media and attract the right audience.
 
-Su rol trasciende el marketing; ella es el principal punto de contacto para ventas y dudas, asegurando que cada cliente reciba una experiencia clara y profesional. Su profunda convicción en nuestra visión se demuestra al ser la inversora fundacional de la empresa, garantizando la solidez y el compromiso a largo plazo de Stairway SpA con sus clientes.
+Her role transcends marketing; she is the main point of contact for sales and inquiries, ensuring that every client receives a clear and professional experience. Her deep conviction in our vision is demonstrated by being the foundational investor in the company, guaranteeing Stairway SpA's long-term solidity and commitment to its clients.

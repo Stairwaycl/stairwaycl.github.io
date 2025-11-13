@@ -1,0 +1,75 @@
+---
+layout: default
+title: "About Us"
+---
+<div class="p-4 shadow bg-grey">
+
+  <h1>
+    About Us
+  </h1>
+
+  <section class="mb-5">
+    <h2 class="border-bottom pt-4 pb-2 mb-4 text-stairway-primary fw-bold">
+        Mission, Vision, and Values
+    </h2>
+    <p>
+      Our goal is that, from the very first stroke, your company has a professional, coherent, and search engine ready digital presence.
+    </p>
+
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm p-4 text-center bg-light">
+                <span class="fs-2 text-primary mb-2 d-block">🚀</span>
+                <h3 class="h5 card-title fw-bold">Our Mission</h3>
+                <p class="card-text text-secondary">To deliver design and digital strategy services that completely transform the image of companies, ensuring a professional and coherent presence across all channels.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm p-4 text-center bg-light">
+                <span class="fs-2 text-primary mb-2 d-block">🌟</span>
+                <h3 class="h5 card-title fw-bold">Our Vision</h3>
+                <p class="card-text text-secondary">To be the service that offers the most complete and fastest-impact image solution on the market, helping companies become leaders in their sector.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm p-4 bg-light">
+                <span class="fs-2 text-primary mb-2 d-block text-center">🧭</span>
+                <h3 class="h5 card-title fw-bold mb-3 text-center">Our Pillars</h3>
+                <ul class="list-unstyled list-custom">
+                    <li class="mb-2 text-secondary-emphasis">Client Focus: Your success is our only objective.</li>
+                    <li class="mb-2 text-secondary-emphasis">Speed and Efficiency: We deliver solutions in optimal timeframes.</li>
+                    <li class="mb-2 text-secondary-emphasis">Positioning (SEO): Your new image will be optimized for the web.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <h2 class="border-bottom pb-2 mb-4 text-stairway-primary fw-bold text-center">
+    The Stairway SpA Team
+
+  </h2>
+
+
+</section>
+{% for author in site.authors %}
+
+    <div class="row {% if forloop.index > 1 %}pt-4{% endif %}">
+        <div class="col-12">
+            <div class="card text-center p-3 shadow-sm border-start border-5 border-dark h-100 rounded-4 bg-light">
+
+                <div class="mx-auto my-3 bg-light rounded-circle d-flex align-items-center justify-content-center border border-secondary" style="width: 80px; height: 80px; font-size: 2rem; color: #1e3a8a;">
+                    {{ author.name | slice: 0, 1 | upcase }}
+                </div>
+
+                <h3 class="h5 card-title fw-bold text-dark">{{ author.name }}</h3>
+                <h4 class="small text-primary mb-3">{{ author.position }}</h4>
+                <p class="card-text text-secondary fst-italic">{{ author.content | markdownify }}</p>
+            </div>
+        </div>
+    </div>
+
+{% endfor %}
+</div>

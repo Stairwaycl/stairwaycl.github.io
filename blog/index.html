@@ -1,17 +1,9 @@
 ---
 layout: default
 ---
-<!---
-<ul class="nav">
-  <li class="nav-item">
-    <a href="/blog/tutorials/design" class="nav-link">Diseño Gráfico</a>
-  </li>
-</ul>
--->
-<h1>
-  Blog
+<h1 class="py-5">
+  Stairway Blog
 </h1>
-
 
 <div class="row">
 {% for post in paginator.posts %}
@@ -22,12 +14,12 @@ layout: default
         <p class="card-text">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
 
         <a href="{{ post.url | relative_url }}" class="btn btn-primary">
-          Leer artículo completo
+          Read Full Article
         </a>
       </div>
 
       <div class="card-footer text-muted">
-        Publicado el {{ post.date | date: "%Y-%m-%d" }}
+        Published on {{ post.date | date: "%Y-%m-%d" }}
       </div>
     </div>
   </div>
@@ -36,7 +28,7 @@ layout: default
 {% if paginator.total_pages > 1 %}
 <div class="row">
   <div class="col-md-6 col-lg-4 mx-auto">
-    <nav aria-label="Navegación de publicaciones">
+    <nav aria-label="Posts Navigation">
 
       <ul class="pagination justify-content-center">
 

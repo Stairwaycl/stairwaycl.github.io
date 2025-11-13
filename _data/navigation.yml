@@ -1,4 +1,6 @@
-- name: Nosotros
+- name: Web Design
+  link: /web-design/
+- name: About
   link: /about.html
 - name: Blog
   link: /blog/
