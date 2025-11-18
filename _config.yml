@@ -29,7 +29,7 @@ github_username: stairwaycl
 
 # Añade una variable para indicar dónde buscar la imagen principal
 # Esto es solo una referencia. El plugin SEO la buscará.
-social_image: https://res.cloudinary.com/ddky4mrmg/image/upload/v1762818484/stairway/ecwhtlyccako0greenqe.png
+social_image: https://res.cloudinary.com/ddky4mrmg/image/upload/w_1200,h_940,c_crop,g_north_west/v1762818484/stairway/ecwhtlyccako0greenqe.png
 
 # Build settings
 theme: null

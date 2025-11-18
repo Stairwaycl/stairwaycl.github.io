@@ -41,7 +41,7 @@ imagotype:
 
 social_image:
   - id: stairway/ecwhtlyccako0greenqe
-    url: https://res.cloudinary.com/ddky4mrmg/image/upload/v1762818484/stairway/ecwhtlyccako0greenqe.png
+    url: https://res.cloudinary.com/ddky4mrmg/image/upload/w_1200,h_940,c_crop,g_north_west/v1762818484/stairway/ecwhtlyccako0greenqe.png
     alt: Imagen principal para redes sociales
 
 favicon:
