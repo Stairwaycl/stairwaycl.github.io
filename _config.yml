@@ -21,7 +21,7 @@
 title: Stairway SpA | Professional Brand Design, Logos, and Static Websites
 email: stairway.cl@gmail.com
 description: >-
-  100% original design of Brand Identity, Logos, and Icons. We build ultra-fast, secure static websites (Jekyll) with own code and free hosting.
+  100% original design of Brand Identity, Logos, and Icons. We build ultra-fast, secure static websites with own code and free hosting.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://stairwaycl.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username:
@@ -29,7 +29,7 @@ github_username: stairwaycl
 
 # Añade una variable para indicar dónde buscar la imagen principal
 # Esto es solo una referencia. El plugin SEO la buscará.
-main_social_image_id: stairway/rcoazxs2x7tq637crc2w
+social_image: https://res.cloudinary.com/ddky4mrmg/image/upload/v1762818484/stairway/ecwhtlyccako0greenqe.png
 
 # Build settings
 theme: null
