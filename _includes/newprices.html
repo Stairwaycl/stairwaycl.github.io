@@ -1,0 +1,225 @@
+<style>
+/* ------------------------------------------- */
+/* Specific CSS for the Pricing Section */
+/* ------------------------------------------- */
+.price-section {
+    padding: 50px 0;
+    background-color: #f8f9fa; /* Bootstrap light gray */
+}
+
+.price-card {
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #fff;
+    height: 100%; /* Ensures all cards have the same height */
+}
+
+.price-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.price-header-com {
+    background-color: #ff3ff6; /* Your brand Fuchsia */
+    color: white;
+    padding: 1rem 0;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.price-header-logo {
+    background-color: #000000; /* Black for logo contrast */
+    color: white;
+    padding: 1rem 0;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.price-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ff3ff6; /* Price highlighted in Fuchsia */
+    margin-bottom: 0;
+    line-height: 1.1; /* Ajuste para el apilamiento vertical */
+}
+
+/* --- NUEVO ESTILO DE PRECIO USD --- */
+.usd-value {
+    font-size: 1.2rem; /* Tamaño más pequeño */
+    font-weight: 500;
+    color: #6c757d; /* Color gris para diferenciar */
+    display: block; /* Fuerza a nueva línea */
+    margin-top: 0.1rem;
+}
+/* --------------------------------- */
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.feature-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.feature-list i {
+    color: #ff3ff6; /* Icons in Fuchsia */
+    margin-right: 8px;
+}
+
+.pack-pro {
+    border: 3px solid #ff3ff6 !important; /* Highlights the PRO package */
+}
+</style>
+
+<section id="servicios-precios" class="price-section">
+    <div class="container">
+        <h2 class="text-center mb-5">Our Identity Services and Packages</h2>
+
+        <h3 class="text-center mb-4">Communication Design (Digital and Physical)</h3>
+        <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+
+            <div class="col">
+                <div class="card price-card">
+                    <div class="price-header-com text-center">
+                        <i class="fas fa-id-card fa-2x mb-2"></i>
+                        <h5>Business Cards</h5>
+                    </div>
+                    <div class="card-body text-center">
+                        <p class="price-value">CLP$ 12.990<span class="usd-value">/ USD$ 14</span></p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle"></i> Final artwork design.</li>
+                            <li><i class="fas fa-check-circle"></i> Print-ready file (PDF/ODG).</li>
+                            <li><i class="fas fa-check-circle"></i> Margin configuration.</li>
+                        </ul>
+                        <a href="https://m.me/106648708512872" class="btn btn-outline-dark mt-3">Purchase Design</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card price-card">
+                    <div class="price-header-com text-center">
+                        <i class="fas fa-envelope fa-2x mb-2"></i>
+                        <h5>Corporate Email Signature</h5>
+                    </div>
+                    <div class="card-body text-center">
+                        <p class="price-value">CLP$ 17.990<span class="usd-value">/ USD$ 19</span></p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle"></i> Design based on your logo.</li>
+                            <li><i class="fas fa-check-circle"></i> Delivery in functional format (HTML/Image).</li>
+                            <li><i class="fas fa-check-circle"></i> Digital brand consistency.</li>
+                            <li><i class="fas fa-check-circle"></i> Optimized code (table-based) for maximum compatibility with Gmail.</li>
+                        </ul>
+                        <a href="https://m.me/106648708512872" class="btn btn-outline-dark mt-3">Purchase Design</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card price-card pack-pro">
+                    <div class="price-header-com text-center">
+                        <i class="fas fa-gift fa-2x mb-2"></i>
+                        <h5 class="fw-bold">360° PACK</h5>
+                    </div>
+                    <div class="card-body text-center">
+                        <p class="price-value">CLP$ 24.990<span class="usd-value">/ USD$ 26</span></p>
+                        <span class="badge bg-dark mb-3">Save CLP$ 5.990!</span>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle"></i> Business Card Design.</li>
+                            <li><i class="fas fa-check-circle"></i> Corporate Email Signature.</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>TOTAL Identity Solution</strong> for daily communication.</li>
+                        </ul>
+                        <a href="https://m.me/106648708512872" class="btn btn-dark mt-3">Hire Pack</a>
+                    </div>
+                </div>
+                Check out our example signature: <a href="/firma.html">Stairway Signature</a>
+            </div>
+
+        </div>
+
+        <h3 class="text-center mb-4">Technical Design and Files (Logos)</h3>
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+
+            <div class="col">
+                <div class="card price-card">
+                    <div class="price-header-logo text-center">
+                        <i class="fas fa-pen-nib fa-2x mb-2"></i>
+                        <h6>Basic Package</h6>
+                    </div>
+                    <div class="card-body text-center">
+                        <p class="price-value">CLP$ 16.990<span class="usd-value">/ USD$ 18</span></p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-circle-notch"></i> <strong>1</strong> Logo Proposal.</li>
+                            <li><i class="fas fa-circle-notch"></i> PNG Files (Web).</li>
+                            <li><i class="fas fa-circle-notch"></i> Basic Usage Guide.</li>
+                        </ul>
+                        <a href="https://m.me/106648708512872" class="btn btn-outline-secondary mt-3">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card price-card">
+                    <div class="price-header-logo text-center">
+                        <i class="fas fa-layer-group fa-2x mb-2"></i>
+                        <h6>Vectorization Only</h6>
+                    </div>
+                    <div class="card-body text-center">
+                        <p class="price-value">CLP$ 24.990<span class="usd-value">/ USD$ 26</span></p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-circle-notch"></i> Professional tracing of existing logo.</li>
+                            <li><i class="fas fa-circle-notch"></i> <strong>Vector</strong> Files (SVG, EPS, PDF).</li>
+                            <li><i class="fas fa-circle-notch"></i> JPG with SII limitations (&lt; 10KB, up to 160px). <strong>(Note: SII refers to Chile's Internal Revenue Service)</strong></li>
+                             <li><i class="fas fa-circle-notch"></i> Basic Usage Guide (Colors, Typography, where and how to use resources).</li>
+                        </ul>
+                        <a href="https://m.me/106648708512872" class="btn btn-outline-secondary mt-3">Hire Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card price-card">
+                    <div class="price-header-logo text-center">
+                        <i class="fas fa-magic fa-2x mb-2"></i>
+                        <h6>Professional Package</h6>
+                    </div>
+                    <div class="card-body text-center">
+                        <p class="price-value">CLP$ 29.990<span class="usd-value">/ USD$ 32</span></p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-circle-notch"></i><strong>3</strong> Original design proposals.</li>
+                            <li><i class="fas fa-circle-notch"></i> Vector and Web files.</li>
+                            <li><i class="fas fa-circle-notch"></i> Complete Usage Guide.</li>
+                        </ul>
+                        <a href="https://m.me/106648708512872" class="btn btn-outline-secondary mt-3">Hire Now</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col">
+                <div class="card price-card pack-pro">
+                    <div class="price-header-logo text-center bg-dark">
+                        <i class="fas fa-medal fa-2x mb-2 text-warning"></i>
+                        <h6 class="fw-bold">Professional Pro Package</h6>
+                    </div>
+                    <div class="card-body text-center">
+                        <p class="price-value text-dark">CLP$ 44.990<span class="usd-value">/ USD$ 48</span></p>
+                        <span class="badge bg-danger mb-3">Save CLP$ 15.980!</span>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check"></i><strong>Professional Logo</strong>  ($29.990).</li>
+                            <li><i class="fas fa-check"></i><strong>Email Signature</strong>  ($17.990).</li>
+                            <li><i class="fas fa-check"></i><strong>Business Cards</strong>  ($12.990).</li>
+                            <li><i class="fas fa-check"></i><strong>TOTAL Identity Solution</strong></li>
+                        </ul>
+                        <a href="https://m.me/106648708512872" class="btn btn-dark mt-3">The Most Complete!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+*For installment payments, please contact us. Valid for logos and corporate signature.
+    </div>
+</section>

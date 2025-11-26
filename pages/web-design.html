@@ -13,7 +13,20 @@ permalink: /web-design/
         .bg-stairway-dark { background-color: #2b3e50; } /* An elegant dark grey/blue */
         .text-stairway-primary { color: #007bff; } /* Your primary color */
         .feature-icon { font-size: 2rem; color: #1e3a8a; } /* Icons to highlight */
-        .price-tag { font-size: 2.5rem; font-weight: bold; }
+
+        /* Nuevo estilo para la visualización del precio doble */
+        .price-tag {
+            font-size: 2.5rem;
+            font-weight: bold;
+            line-height: 1.1;
+        }
+        .usd-tag {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #6c757d; /* Subtler gray color */
+            display: block;
+            margin-top: 0.1rem;
+        }
     </style>
 </head>
 <body>
@@ -66,11 +79,11 @@ permalink: /web-design/
                 <div class="col-md-6 col-lg-5">
                     <div class="card h-100 shadow-lg border-primary border-3">
                         <div class="card-header text-center bg-primary text-white py-3">
-                            <h3 class="h4 mb-0 fw-bold">BASIC</h3>
+                            <h3 class="h4 mb-0 fw-bold">BASIC DEVELOP & DESIGN</h3>
                             <p class="small mb-0">High-Performance Landing Page</p>
                         </div>
                         <div class="card-body p-4 text-center">
-                            <div class="price-tag text-stairway-primary">US$59</div>
+                            <div class="price-tag text-stairway-primary">CLP$ 49.990<span class="usd-tag">/ US$ 59</span></div>
                             <ul class="list-unstyled mt-3 mb-4 text-start">
                                 <li>✅ Single-page design (Landing Page).</li>
                                 <li>✅ Emphasis on SEO and speed.</li>
@@ -86,11 +99,11 @@ permalink: /web-design/
                 <div class="col-md-6 col-lg-5">
                     <div class="card h-100 shadow-lg border-dark border-3">
                         <div class="card-header text-center bg-dark text-white py-3">
-                            <h3 class="h4 mb-0 fw-bold">STANDARD</h3>
+                            <h3 class="h4 mb-0 fw-bold">STANDARD DEVELOP & DESIGN</h3>
                             <p class="small mb-0">Corporate and Editable Website</p>
                         </div>
                         <div class="card-body p-4 text-center">
-                            <div class="price-tag text-dark">US$69</div>
+                            <div class="price-tag text-dark">CLP$ 59.990<span class="usd-tag">/ US$ 69</span></div>
                             <ul class="list-unstyled mt-3 mb-4 text-start">
                                 <li>✅ Multiple sections (Services, Contact, etc.).</li>
                                 <li>✅ Static Form Integration.</li>
