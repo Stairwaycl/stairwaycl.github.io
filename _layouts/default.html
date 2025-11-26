@@ -50,7 +50,7 @@
   El plugin jekyll-seo-tag prioriza 'page.image' para los meta tags 'og:image' y 'twitter:image'.
 {% endcomment %}
 
-{% if page.image == nil %}
+{% if page.image == site.social_image %}
   {% assign page.image = social_img_url %}
 {% endif %}
 
