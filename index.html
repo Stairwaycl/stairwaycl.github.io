@@ -17,7 +17,7 @@ image: true
 </section>
 
 <div class="container pt-5">
-  <h2 class="text-center">Our Portfolio</h2>
+  <h2 class="text-center">Some of our logo work</h2>
 
   <div class="logo-gallery">
 
@@ -101,9 +101,6 @@ image: true
 </section>
 
 
-<!--offcanvas-->
-
-
 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasPagoPackBasico" aria-labelledby="offcanvasPagoLabel">
   <div class="offcanvas-header bg-success text-white">
       <h5 class="offcanvas-title" id="offcanvasPagoLabel">Complete Payment: Basic Package</h5>
@@ -175,6 +172,23 @@ image: true
   </div>
 </div>
 
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasPagoBusinessCard" aria-labelledby="offcanvasBusinessCardLabel">
+  <div class="offcanvas-header bg-info text-white">
+      <h5 class="offcanvas-title" id="offcanvasBusinessCardLabel">Complete Payment: Business Card Design</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+
+      <p>You are about to pay for the Business Card Design service.</p>
+
+      <div id="paypal-container-CTEVSGCQYDM5S" class="text-center my-4">
+          </div>
+
+      <div class="text-center">
+          <p class="small text-muted">Single and secure payment through the PayPal platform.</p>
+      </div>
+  </div>
+</div>
 <script>
   // 1. ID Mapping: Offcanvas ID -> PayPal Data
   const paypalMap = {
@@ -200,6 +214,12 @@ image: true
       'offcanvasPagoFirma': {
           hostedId: 'ZAEQD88HC3PA4',
           containerId: '#paypal-container-ZAEQD88HC3PA4',
+          rendered: false
+      },
+      // PACK 5: BUSINESS CARD (ID: CTEVSGCQYDM5S) <-- AÑADIDO
+      'offcanvasPagoBusinessCard': {
+          hostedId: 'CTEVSGCQYDM5S',
+          containerId: '#paypal-container-CTEVSGCQYDM5S',
           rendered: false
       },
   };
