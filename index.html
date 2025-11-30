@@ -88,6 +88,7 @@ image: true
       <p class="lead mb-5 text-danger fw-bold">Prices valid for a limited time. Take advantage of the value of a complete and versatile Brand Identity!</p>
 
       {% include newprices.html %}
+      {% include webprices.html %}
 
   </div>
 </section>
@@ -189,6 +190,98 @@ image: true
       </div>
   </div>
 </div>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasPagoCorporateMail" aria-labelledby="offcanvasCorporateMailLabel">
+  <div class="offcanvas-header bg-warning text-dark">
+      <h5 class="offcanvas-title" id="offcanvasCorporateMailLabel">Complete Payment: Corporate Email Signature</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+
+      <p>You are about to pay for the HTML Corporate Signature Design service.</p>
+
+      <div id="paypal-container-Z2TFZRTRKYPWG" class="text-center my-4">
+          </div>
+
+      <div class="text-center">
+          <p class="small text-muted">Single and secure payment through the PayPal platform.</p>
+      </div>
+  </div>
+</div>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasPago360Pack" aria-labelledby="offcanvas360PackLabel">
+  <div class="offcanvas-header bg-dark text-white">
+      <h5 class="offcanvas-title" id="offcanvas360PackLabel">Complete Payment: 360° Pack</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+
+      <p>You are about to pay for the **360° PACK** (Business Card + Corporate Signature).</p>
+
+      <div id="paypal-container-LRNH97PZ5J698" class="text-center my-4">
+          </div>
+
+      <div class="text-center">
+          <p class="small text-muted">Single and secure payment through the PayPal platform.</p>
+      </div>
+  </div>
+</div>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasPagoProProPack" aria-labelledby="offcanvasProProPackLabel">
+  <div class="offcanvas-header bg-dark text-warning">
+      <h5 class="offcanvas-title" id="offcanvasProProPackLabel">Complete Payment: Professional Pro Package</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+
+      <p>You are about to pay for the **Professional Pro Package** (Logo + Identity).</p>
+
+      <div id="paypal-container-BTTL7FGBTQ6S6" class="text-center my-4">
+          </div>
+
+      <div class="text-center">
+          <p class="small text-muted">Single and secure payment through the PayPal platform.</p>
+      </div>
+  </div>
+</div>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasPagoWebBasic" aria-labelledby="offcanvasWebBasicLabel">
+  <div class="offcanvas-header bg-primary text-white">
+      <h5 class="offcanvas-title" id="offcanvasWebBasicLabel">Complete Payment: Basic Web Development</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+
+      <p>You are about to pay for the **BASIC DEVELOP & DESIGN** (Static Landing Page).</p>
+
+      <div id="paypal-container-F8G7LGUF6C8K8" class="text-center my-4">
+          </div>
+
+      <div class="text-center">
+          <p class="small text-muted">Single and secure payment through the PayPal platform.</p>
+      </div>
+  </div>
+</div>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasPagoWebStandard" aria-labelledby="offcanvasWebStandardLabel">
+  <div class="offcanvas-header bg-dark text-white">
+      <h5 class="offcanvas-title" id="offcanvasWebStandardLabel">Complete Payment: Standard Web Development</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+
+      <p>You are about to pay for the **STANDARD DEVELOP & DESIGN** (Corporate Website).</p>
+
+      <div id="paypal-container-BQS9D9NJ77GRJ" class="text-center my-4">
+          </div>
+
+      <div class="text-center">
+          <p class="small text-muted">Single and secure payment through the PayPal platform.</p>
+      </div>
+  </div>
+</div>
+
+
 <script>
   // 1. ID Mapping: Offcanvas ID -> PayPal Data
   const paypalMap = {
@@ -210,16 +303,40 @@ image: true
           containerId: '#paypal-container-7YU6GSUTE4SYS',
           rendered: false
       },
-      // PACK 4: CORPORATE SIGNATURE (ID: ZAEQD88HC3PA4)
-      'offcanvasPagoFirma': {
-          hostedId: 'ZAEQD88HC3PA4',
-          containerId: '#paypal-container-ZAEQD88HC3PA4',
-          rendered: false
-      },
       // PACK 5: BUSINESS CARD (ID: CTEVSGCQYDM5S) <-- AÑADIDO
       'offcanvasPagoBusinessCard': {
           hostedId: 'CTEVSGCQYDM5S',
           containerId: '#paypal-container-CTEVSGCQYDM5S',
+          rendered: false
+      },
+      // PACK 6: CORPORATE EMAIL SIGNATURE (ID: Z2TFZRTRKYPWG) <-- NUEVO
+      'offcanvasPagoCorporateMail': {
+          hostedId: 'Z2TFZRTRKYPWG',
+          containerId: '#paypal-container-Z2TFZRTRKYPWG',
+          rendered: false
+      },
+      // PACK 7: 360 PACK (ID: LRNH97PZ5J698) <-- NUEVO
+      'offcanvasPago360Pack': {
+          hostedId: 'LRNH97PZ5J698',
+          containerId: '#paypal-container-LRNH97PZ5J698',
+          rendered: false
+      },
+      // PACK 8: PROFESSIONAL PRO PACK (ID: BTTL7FGBTQ6S6) <-- NUEVO
+      'offcanvasPagoProProPack': {
+          hostedId: 'BTTL7FGBTQ6S6',
+          containerId: '#paypal-container-BTTL7FGBTQ6S6',
+          rendered: false
+      },
+      // PACK 9: BASIC DEVELOP & DESIGN (ID: F8G7LGUF6C8K8) <-- NUEVO
+      'offcanvasPagoWebBasic': {
+          hostedId: 'F8G7LGUF6C8K8',
+          containerId: '#paypal-container-F8G7LGUF6C8K8',
+          rendered: false
+      },
+      // PACK 10: STANDARD DEVELOP & DESIGN (ID: BQS9D9NJ77GRJ) <-- NUEVO
+      'offcanvasPagoWebStandard': {
+          hostedId: 'BQS9D9NJ77GRJ',
+          containerId: '#paypal-container-BQS9D9NJ77GRJ',
           rendered: false
       },
   };
