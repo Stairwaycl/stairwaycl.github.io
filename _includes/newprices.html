@@ -1,0 +1,179 @@
+<style>
+    /* Efecto de movimiento para servicios de identidad */
+    .card-identity {
+        transition: all 0.3s ease-in-out;
+        border-radius: 1rem;
+        background-color: #ffffff;
+        cursor: pointer;
+    }
+
+    .card-identity:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 25px rgba(0,0,0,0.12) !important;
+    }
+
+    /* Cabeceras de tarjetas */
+    .price-header-com {
+        background-color: #6f42c1;
+        color: white;
+        padding: 1.2rem 0;
+        border-radius: 1rem 1rem 0 0;
+    }
+    .price-header-logo {
+        background-color: #212529;
+        color: white;
+        padding: 1rem 0;
+        border-radius: 1rem 1rem 0 0;
+    }
+
+    /* Valores de precio */
+    .price-value { font-size: 1.8rem; font-weight: 700; color: #6f42c1; margin-bottom: 0; line-height: 1.1; }
+    .price-value-dark { font-size: 1.8rem; font-weight: 700; color: #212529; margin-bottom: 0; line-height: 1.1; }
+    .usd-value { font-size: 0.9rem; font-weight: 500; color: #6c757d; display: block; }
+
+    /* Lista de características */
+    .feature-list { list-style: none; padding: 1.2rem; text-align: left; font-size: 0.85rem; margin-bottom: 0; }
+    .feature-list li { padding: 6px 0; border-bottom: 1px solid #f8f9fa; display: flex; align-items: center; }
+    .feature-list i { margin-right: 10px; width: 20px; text-align: center; }
+
+    /* Info Cripto en miniatura */
+    .crypto-small-info { font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 8px; }
+</style>
+
+<section id="servicios-complementarios" class="py-5">
+    <div class="container">
+        <hr class="my-5 opacity-25" style="border-color: rgba(255,255,255,0.3);">
+        <h3 class="text-center mb-5 fw-bold text-white">Servicios Complementarios de Identidad</h3>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+            {% for item in site.data.services.identidad_complementos %}
+
+            {% comment %} Aislamiento de lógica para limpiar el HTML {% endcomment %}
+            {% assign es_destacado = false %}
+            {% if item.destacado %}{% assign es_destacado = true %}{% endif %}
+
+            {% assign card_clase = "border-0" %}
+            {% assign header_clase = "" %}
+            {% assign icono_clase = "" %}
+            {% assign titulo_clase = "" %}
+            {% assign precio_clase = "" %}
+            {% assign boton_clase = "btn-outline-primary" %}
+            {% assign crypto_clase = "text-muted" %}
+
+            {% if es_destacado %}
+                {% assign card_clase = "border-primary border-2" %}
+                {% assign header_clase = "bg-primary" %}
+                {% assign icono_clase = "text-warning" %}
+                {% assign titulo_clase = "fw-bold" %}
+                {% assign precio_clase = "text-primary" %}
+                {% assign boton_clase = "btn-primary fw-bold" %}
+                {% assign crypto_clase = "text-primary" %}
+            {% endif %}
+
+            <div class="col">
+                <div class="card h-100 card-identity shadow-sm {{ card_clase }}">
+                    <div class="price-header-com text-center {{ header_clase }}">
+                        <i class="fa-solid {{ item.icono }} fs-2 mb-2 {{ icono_clase }}"></i>
+                        <h5 class="{{ titulo_clase }} mb-0">{{ item.nombre }}</h5>
+                    </div>
+                    <div class="card-body text-center d-flex flex-column">
+                        <p class="price-value {{ precio_clase }}">
+                            CLP$ {{ item.precio_clp }}<span class="usd-value">/ USD$ {{ item.precio_usd }}</span>
+                        </p>
+
+                        {% if item.ahorro %}
+                        <div class="badge bg-success rounded-pill mb-3 mx-auto" style="width: fit-content;">¡Ahorra CLP$ {{ item.ahorro }}!</div>
+                        {% endif %}
+
+                        <ul class="feature-list text-dark">
+                            {% for feature in item.items %}
+                            <li>
+                                <i class="fa-solid {% if es_destacado %}fa-star text-warning{% else %}fa-circle-check text-primary{% endif %} me-2"></i>
+                                {% if feature.texto %}
+                                    {{ feature.texto }}
+                                {% else %}
+                                    {{ feature }}
+                                {% endif %}
+                            </li>
+                            {% endfor %}
+                        </ul>
+
+                        <button type="button" class="btn {{ boton_clase }} rounded-pill mt-auto btn-sm"
+                                data-bs-toggle="offcanvas" data-bs-target="#offcanvasContactoPago">
+                            {{ item.boton }}
+                        </button>
+                        <div class="crypto-small-info {{ crypto_clase }}">
+                            <i class="fa-brands fa-bitcoin"></i> Nativa | <i class="fa-brands fa-ethereum"></i> Base
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <h4 class="text-center mb-4 fw-bold text-white">Diseño Técnico de Logotipos</h4>
+
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            {% for logo in site.data.services.logos %}
+
+            {% comment %} Aislamiento de lógica para el bloque de logotipos {% endcomment %}
+            {% assign es_pro = false %}
+            {% if logo.pro %}{% assign es_pro = true %}{% endif %}
+
+            {% assign logo_card_clase = "shadow-sm border-0" %}
+            {% assign logo_titulo_clase = "" %}
+            {% assign logo_boton_clase = "btn-outline-dark" %}
+            {% assign logo_boton_texto = "Contratar" %}
+            {% assign logo_crypto_clase = "text-muted" %}
+
+            {% if es_pro %}
+                {% assign logo_card_clase = "shadow-lg border-light border-2" %}
+                {% assign logo_titulo_clase = "fw-bold" %}
+                {% assign logo_boton_clase = "btn-light fw-bold" %}
+                {% assign logo_boton_texto = "Lo quiero todo" %}
+                {% assign logo_crypto_clase = "text-dark" %}
+            {% endif %}
+
+            <div class="col">
+                <div class="card h-100 card-identity {{ logo_card_clase }}">
+                    <div class="price-header-logo text-center">
+                        <h6 class="{{ logo_titulo_clase }} mb-0">{{ logo.nombre }}</h6>
+                    </div>
+                    <div class="card-body text-center d-flex flex-column">
+                        <p class="price-value-dark">CLP$ {{ logo.precio_clp }}<span class="usd-value">/ USD$ {{ logo.precio_usd }}</span></p>
+
+                        {% if es_pro %}
+                        <div class="badge bg-danger rounded-pill mb-2 mx-auto" style="width: fit-content;">¡El más completo!</div>
+                        {% endif %}
+
+                        <ul class="feature-list text-dark">
+                            {% for feat in logo.items %}
+                            <li>
+                                <i class="fa-solid {% if feat.icono %}{{ feat.icono }}{% elsif es_pro %}fa-check-double text-success{% else %}fa-minus text-secondary{% endif %} me-2"></i>
+                                {% if feat.texto %}
+                                    {{ feat.texto }}
+                                {% else %}
+                                    {{ feat }}
+                                {% endif %}
+                            </li>
+                            {% endfor %}
+                        </ul>
+
+                        <button type="button" class="btn {{ logo_boton_clase }} btn-sm rounded-pill mt-auto"
+                                data-bs-toggle="offcanvas" data-bs-target="#offcanvasContactoPago">
+                            {{ logo_boton_texto }}
+                        </button>
+                        <div class="crypto-small-info {{ logo_crypto_clase }}">
+                            <i class="fa-brands fa-bitcoin"></i> Nativa | <i class="fa-brands fa-ethereum"></i> Base
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <p class="text-center mt-5 small text-white-50">
+            <i class="fa-solid fa-shield-halved text-success"></i> Pagos vía Transferencia Bancaria o Criptomonedas. PayPal disponible para clientes internacionales.
+        </p>
+    </div>
+</section>

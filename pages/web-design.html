@@ -1,0 +1,176 @@
+---
+layout: default
+title: "Ingeniería Web y Software a Medida | Stairway"
+permalink: /web-design/
+---
+
+<style>
+    .bg-stairway-dark { background-color: #1a252f; }
+    .text-stairway-primary { color: #007bff; }
+    .feature-icon { font-size: 2.5rem; color: #007bff; margin-bottom: 1rem; display: block; }
+
+    .price-tag {
+        font-size: 2.5rem;
+        font-weight: bold;
+        line-height: 1.1;
+    }
+    .usd-tag {
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: #6c757d;
+        display: block;
+        margin-top: 0.1rem;
+    }
+    .card-software {
+        border: none;
+        transition: transform 0.3s ease;
+    }
+    .card-software:hover {
+        transform: translateY(-10px);
+    }
+</style>
+
+<div style="height: 60px;"></div>
+
+<header class="py-5 bg-stairway-dark text-white shadow-lg">
+    <div class="container text-center py-4">
+        <h1 class="display-4 fw-bold">Ingeniería Web: Escalable, Segura y 100% Tuya.</h1>
+        <p class="lead mt-3 mb-4 opacity-75">
+            Desde aplicaciones complejas en <strong>Ruby on Rails</strong> hasta sitios estáticos ultrarrápidos con <strong>Jekyll</strong>.
+        </p>
+        <a href="#planes" class="btn btn-lg btn-primary shadow-sm me-2 px-4">Ver Planes de Desarrollo</a>
+        <a href="https://m.me/106648708512872" class="btn btn-lg btn-outline-light shadow-sm px-4">Consulta Técnica</a>
+    </div>
+</header>
+
+<!-- Sección de Tecnologías -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5 fw-bold">Tecnología de Vanguardia para tu Negocio</h2>
+        <div class="row text-center g-4">
+            <div class="col-md-4">
+                <div class="p-4 card-software h-100">
+                    <i class="bi bi-gem feature-icon text-danger"></i>
+                    <h3 class="h5 fw-bold">Ruby on Rails (Backend)</h3>
+                    <p class="text-muted">Desarrollamos la lógica de negocio robusta: CRMs, SaaS y sistemas escalables.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-4 card-software h-100">
+                    <i class="bi bi-lightning-charge-fill feature-icon text-warning"></i>
+                    <h3 class="h5 fw-bold">Sitios Estáticos (Jekyll)</h3>
+                    <p class="text-muted">Velocidad instantánea y seguridad impenetrable. Ideal para SEO de fábrica.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-4 card-software h-100">
+                    <i class="bi bi-code-slash feature-icon text-info"></i>
+                    <h3 class="h5 fw-bold">Código Propio (Forever Access)</h3>
+                    <p class="text-muted">Sin cuotas mensuales. Eres el dueño absoluto de tu plataforma y código fuente.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección de Planes Dinámicos -->
+<section id="planes" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-2 fw-bold">Soluciones y Precios</h2>
+        <p class="text-center text-muted mb-5">Inversiones transparentes para tecnología de alto nivel.</p>
+
+        <div class="row justify-content-center g-4">
+            {% for plan in site.data.services.web limit:2 %}
+            <div class="col-md-6 col-lg-5">
+                <div class="card h-100 shadow-lg border-0 rounded-4">
+                    <div class="card-header text-center py-4 rounded-top-4 {% if plan.nombre contains 'BÁSICO' or plan.nombre == 'LANDING PAGE' %}bg-primary text-white{% else %}bg-dark text-white{% endif %}">
+                        <h3 class="h4 mb-0 fw-bold">{{ plan.nombre }}</h3>
+                        <p class="small mb-0 opacity-75">{{ plan.subtitulo }}</p>
+                    </div>
+                    <div class="card-body p-4 text-center">
+                        <div class="price-tag {% if plan.nombre contains 'BÁSICO' or plan.nombre == 'LANDING PAGE' %}text-primary{% else %}text-dark{% endif %}">
+                            CLP$ {{ plan.precio_clp }}
+                            <span class="usd-tag">/ US$ {{ plan.precio_usd | default: '59' }}</span>
+                        </div>
+                        <hr>
+                        <ul class="list-unstyled mt-3 mb-4 text-start">
+                            {% for item in plan.items %}
+                            <li class="mb-2">
+                                <i class="bi bi-check2-circle me-2 {% if plan.nombre contains 'BÁSICO' or plan.nombre == 'LANDING PAGE' %}text-primary{% else %}text-dark{% endif %}"></i>
+                                {{ item.texto }}
+                            </li>
+                            {% endfor %}
+                        </ul>
+                        <button class="btn btn-lg w-100 rounded-pill {% if plan.nombre contains 'BÁSICO' or plan.nombre == 'LANDING PAGE' %}btn-primary{% else %}btn-dark{% endif %}"
+                                data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasContactoPago">
+                            {{ plan.boton_texto | default: 'Comenzar Proyecto' }}
+                        </button>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Call to Action para Software a Medida (Rails) -->
+        <div class="row mt-5">
+            <div class="col-12 text-center">
+                <div class="p-4 bg-white shadow-sm rounded-4 border">
+                    <h4 class="fw-bold">¿Necesitas algo más complejo?</h4>
+                    <p class="text-muted">Desarrollamos aplicaciones web a medida (SaaS, CRMs) usando <strong>Ruby on Rails</strong>.</p>
+                    <a href="https://m.me/106648708512872" class="btn btn-outline-primary px-5">Cotizar Software a Medida</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQs y Navigation se mantienen igual... -->
+
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5 fw-bold">Preguntas Frecuentes</h2>
+        <div class="accordion accordion-flush shadow-sm rounded-4" id="faqAccordion">
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                        ¿Qué significa "Código Propio" y "Forever Access"?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body text-muted">
+                        A diferencia de plataformas como Wix o Shopify donde "alquilas" tu sitio, nosotros te entregamos el código fuente completo. Eres el dueño legal y técnico. Puedes cambiar de hosting o modificarlo tú mismo sin pagar licencias perpetuas a terceros.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                        ¿Por qué usan Ruby on Rails para proyectos grandes?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body text-muted">
+                        Ruby on Rails es el estándar de la industria para startups de rápido crecimiento (como Airbnb o GitHub). Nos permite construir aplicaciones complejas con bases de datos de forma segura, rápida y escalable, garantizando que el software crezca junto con tu empresa.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                        ¿El hosting es realmente gratuito?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body text-muted">
+                        Para sitios estáticos (Jekyll), utilizamos plataformas como GitHub Pages o Render que ofrecen planes gratuitos permanentes para este tipo de tecnología. Solo deberás renovar tu nombre de dominio (.cl o .com) anualmente.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

@@ -1,0 +1,62 @@
+// _sass/_navbar.scss
+
+.stairway-navbar {
+  background: rgba(10, 10, 10, 0.9) !important; // Negro profundo traslúcido
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2); // Borde dorado sutil
+
+  .nav-link {
+    color: rgba(255, 255, 255, 0.7) !important;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+
+    &:hover, &.active {
+      color: #D4AF37 !important; // Dorado Tecla
+      transform: translateY(-2px);
+    }
+  }
+}
+
+.btn-gold {
+  background-color: #D4AF37;
+  color: #000 !important;
+  border: none;
+  transition: all 0.3s ease;
+  font-size: 1.4rem;
+
+  &:hover {
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+    transform: scale(1.05);
+  }
+}
+
+/* --- EFECTO GLOW EN NAVEGACIÓN --- */
+
+/* Brillo en el Logo */
+.logo-glow img {
+  transition: all 0.4s ease;
+}
+
+.logo-glow:hover img {
+  filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.8)); /* Brillo dorado al logo */
+  transform: scale(1.02);
+}
+
+/* Brillo en los Links de texto */
+.nav-link-glow {
+  transition: all 0.3s ease !important;
+}
+
+.nav-link-glow:hover {
+  color: #D4AF37 !important;
+  text-shadow: 0 0 8px rgba(212, 175, 55, 0.6); /* Brillo dorado al texto */
+}
+
+/* Botón Gold con brillo extra en hover */
+.btn-gold:hover {
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.6) !important;
+  transform: translateY(-2px);
+}

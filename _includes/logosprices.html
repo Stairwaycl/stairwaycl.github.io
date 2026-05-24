@@ -1,0 +1,45 @@
+<style>
+  /* Animación para las tarjetas de la sección de Software y Stack */
+  .software-card, .icon-box {
+    transition: all 0.3s ease-in-out;
+  }
+  .software-card:hover, .icon-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2) !important;
+  }
+  /* Estilo para los botones sociales */
+  .social-btn {
+    width: 45px; height: 45px;
+    display: inline-flex; align-items: center; justify-content: center;
+    border-radius: 50%; margin: 0 8px; font-size: 1.2rem;
+    transition: transform 0.2s; color: white; text-decoration: none;
+  }
+  .social-btn:hover { transform: scale(1.2); color: white; }
+  .btn-linkedin { background-color: #0077b5; }
+  .btn-instagram { background-color: #e4405f; }
+  .btn-facebook { background-color: #1877f2; }
+  .btn-github { background-color: #333; }
+</style>
+
+<div class="container pt-5 border-top">
+  <h2 class="text-center fw-bold">Identidad de Marca y Diseño Visual</h2>
+  <p class="text-center mb-4">Un gran software necesita una gran imagen. También ofrecemos servicios completos de branding.</p>
+
+  <div class="logo-gallery">
+  {% assign lista_isotipos = site.data.cloudinary_logos.isotype %}
+  {% for logo in lista_isotipos %}
+    <img class="gallery-item" src="{{ logo.url }}" alt="{{ logo.alt }}">
+  {% endfor %}
+  </div>
+
+  <div class="logo-gallery mt-2">
+  {% assign lista_imagotipos = site.data.cloudinary_logos.imagotype %}
+  {% for logo in lista_imagotipos %}
+    <img class="gallery-item2" src="{{ logo.url }}" alt="{{ logo.alt }}">
+  {% endfor %}
+  </div>
+
+  <div class="text-center mt-3">
+     <p class="text-secondary mb-0">Logos Originales | <strong>5+</strong> Años de Experiencia</p>
+  </div>
+</div>

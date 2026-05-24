@@ -1,0 +1,97 @@
+---
+layout: default
+title: "Blog de Stairway | Desarrollo, Software y Tecnología"
+---
+
+<style>
+    /* Estilo para las tarjetas del blog con movimiento */
+    .card-blog {
+        transition: all 0.3s ease-in-out;
+        border: 1px solid #e0e0e0;
+        border-radius: 1rem;
+        overflow: hidden;
+        background-color: #2c3014;
+    }
+
+    .card-blog:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+
+    /* Fondo sutil para el cuerpo de la tarjeta */
+    .card-body-tech {
+        background-color: #f8f9fa; /* Un gris muy claro y limpio */
+        border-top: 1px solid #eee;
+    }
+
+    .blog-title {
+        font-weight: 800;
+        color: #212529;
+    }
+</style>
+
+<div class="container py-5">
+    <header class="text-center mb-5">
+        <h1 class="display-4 fw-bold">Blog de Stairway</h1>
+        <p class="lead">Notas sobre ingeniería de software, Ruby on Rails y diseño digital.</p>
+    </header>
+
+    <div class="row">
+    {% for post in paginator.posts %}
+      <div class="col-md-6 mb-4">
+        <div class="card h-100 card-blog shadow-sm">
+          <div class="card-body card-body-tech">
+            <h5 class="card-title fw-bold text-primary">{{ post.title }}</h5>
+            <p class="card-text text-secondary">
+                {{ post.excerpt | strip_html | truncatewords: 25 }}
+            </p>
+
+            <a href="{{ post.url | relative_url }}" class="btn btn-outline-primary rounded-pill btn-sm">
+              Leer artículo completo <i class="bi bi-arrow-right ms-1"></i>
+            </a>
+          </div>
+
+          <div class="card-footer text-muted small bg-white border-0">
+            <i class="bi bi-calendar3 me-1"></i> Publicado el {{ post.date | date: "%d/%m/%Y" }}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+    </div>
+
+    <!-- Paginación -->
+    {% if paginator.total_pages > 1 %}
+    <nav aria-label="Navegación de entradas" class="mt-5">
+      <ul class="pagination justify-content-center">
+
+        <li class="page-item {% unless paginator.previous_page %}disabled{% endunless %}">
+          <a class="page-link rounded-start-pill"
+             href="{{ paginator.previous_page_path | relative_url }}">
+             <i class="bi bi-chevron-left"></i> Anterior
+          </a>
+        </li>
+
+        {% for page in (1..paginator.total_pages) %}
+          <li class="page-item {% if page == paginator.page %}active{% endif %}">
+            {% assign page_path = "/blog/" %}
+            {% if page > 1 %}
+              {% assign page_path = "/blog/page" | append: page %}
+            {% endif %}
+
+            <a class="page-link" href="{{ page_path | relative_url }}">
+              {{ page }}
+            </a>
+          </li>
+        {% endfor %}
+
+        <li class="page-item {% unless paginator.next_page %}disabled{% endunless %}">
+          <a class="page-link rounded-end-pill"
+             href="{{ paginator.next_page_path | relative_url }}">
+              Siguiente <i class="bi bi-chevron-right"></i>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+    {% endif %}
+</div>

@@ -1,0 +1,132 @@
+# SECCIÓN: DESARROLLO WEB 🌐
+web:
+  - nombre: "LANDING PAGE"
+    subtitulo: "Presencia Digital Rápida"
+    precio_clp: "49.990"
+    pago_texto: "Pago Único por Desarrollo"
+    suscripcion_clp: "12.000"
+    suscripcion_texto: "Suscripción Mensual"
+    estilo: "bg-light"
+    items:
+      - { texto: "Botones de Contacto Directo", icono: "bi-whatsapp", color: "text-success" }
+      - { texto: "Mapa e Integración de RRSS", icono: "bi-geo-alt", color: "text-danger" }
+      - { texto: "Carga Ultra-Rápida (Jekyll)", icono: "bi-lightning-charge", color: "text-warning" }
+      - { texto: "Seguridad Estática Total", icono: "bi-shield-lock", color: "text-success" }
+    setup_label: "Implementación técnica"
+    setup_precio: "Dominio, Correo y SSL Incluidos"
+    boton_texto: "ELEGIR PAGO ÚNICO"
+    boton_suscripcion_texto: "SUSCRIBIRSE"
+    boton_suscripcion_url: "https://www.mercadopago.cl/subscriptions/checkout?preapproval_plan_id=117a12d83b4a4b5398187500cfb6da23"
+    crypto: true
+
+  - nombre: "WEB CORPORATIVA"
+    subtitulo: "Catálogo & Web App (PWA)"
+    precio_clp: "69.990"
+    pago_texto: "Pago Único por Desarrollo"
+    suscripcion_clp: "15.000"
+    suscripcion_texto: "Suscripción Mensual"
+    badge: "Ideal Restaurantes & Delivery"
+    estilo: "bg-dark text-white"
+    card_border: "border-primary border-2"
+    items:
+      - { texto: "Carrito a WhatsApp", icono: "bi-cart-check", color: "text-primary", bold: true }
+      - { texto: "PWA: Instalable como App", icono: "bi-phone", color: "text-success", bold: true }
+      - { texto: "Catálogo Autogestionado", icono: "bi-hdd-network", color: "text-danger" }
+      - { texto: "Estructura Multi-página", icono: "bi-layers", color: "text-info" }
+    setup_label: "Implementación técnica"
+    setup_precio: "Dominio, Correo y SSL Incluidos"
+    boton_texto: "ELEGIR PAGO ÚNICO"
+    boton_clase: "btn-primary"
+    boton_suscripcion_texto: "SUSCRIBIRSE"
+    boton_suscripcion_url: "https://www.mercadopago.cl/subscriptions/checkout?preapproval_plan_id=c8819e638520475cab1deeff45f1ca69"
+    crypto: true
+
+  - nombre: "SISTEMAS A MEDIDA"
+    subtitulo: "Software & SaaS (RoR)"
+    precio_clp: "159.990"
+    pago_texto: "Desde / Cotización"
+    suscripcion_clp: "20.000"
+    suscripcion_texto: "Suscripción Mensual"
+    estilo: "bg-rails text-white"
+    card_border: "card-ror-highlight"
+    items:
+      - { texto: "Bases de Datos PostgreSQL", icono: "bi-database", color: "text-rails" }
+      - { texto: "Paneles de Administración", icono: "bi-shield-check", color: "text-rails" }
+      - { texto: "Automatización de Procesos", icono: "bi-cpu", color: "text-rails" }
+      - { texto: "Integración de Pagos Online", icono: "bi-credit-card", color: "text-rails" }
+    setup_label: "Infraestructura"
+    setup_precio: "Cotización según escala técnica"
+    boton_texto: "COTIZAR PROYECTO"
+    boton_clase: "btn-success"
+    boton_suscripcion_texto: "SUSCRIBIRSE"
+    boton_suscripcion_url: "https://www.mercadopago.cl/subscriptions/checkout?preapproval_plan_id=b381a45ca46b40e89b2fa62219710d13"
+    crypto: true
+
+# SECCIÓN: IDENTIDAD COMPLEMENTARIA 🪪
+identidad:
+  - nombre: "Tarjetas de Presentación"
+    precio_clp: "12.990"
+    precio_usd: "14"
+    icono_header: "fa-id-card"
+    items:
+      - { texto: "Diseño de arte final.", icono: "fa-circle-check" }
+      - { texto: "Archivo listo para imprenta.", icono: "fa-file-pdf" }
+      - { texto: "Márgenes técnicos.", icono: "fa-crop-simple" }
+    boton_texto: "Comprar Diseño"
+
+  - nombre: "Firma de Correo HTML"
+    precio_clp: "17.990"
+    precio_usd: "19"
+    icono_header: "fa-envelope-open-text"
+    items:
+      - { texto: "Diseño corporativo.", icono: "fa-circle-check" }
+      - { texto: "Código HTML (Gmail/Outlook).", icono: "fa-code" }
+      - { texto: "Consistencia digital.", icono: "fa-display" }
+    boton_texto: "Comprar Firma"
+
+  - nombre: "PACK IDENTIDAD 360°"
+    destacado: true
+    ahorra: "5.990"
+    precio_clp: "24.990"
+    precio_usd: "26"
+    icono_header: "fa-award"
+    items:
+      - { texto: "Tarjeta de Presentación.", icono: "fa-star" }
+      - { texto: "Firma de Correo HTML.", icono: "fa-star" }
+      - { texto: "Solución de imagen total.", icono: "fa-circle-nodes" }
+    boton_texto: "Contratar Pack"
+
+# SECCIÓN: LOGOTIPOS 🎨
+logos:
+  - nombre: "Pack Logo Básico"
+    precio_clp: "9.990"
+    precio_usd: "10"
+    items:
+      - { texto: "1 Propuesta con modificaciones", icono: "fa-minus" }
+      - { texto: "PNG (Fondo Transparente).", icono: "fa-image" }
+    boton_texto: "Contratar"
+
+  - nombre: "Vectorización"
+    precio_clp: "24.990"
+    precio_usd: "26"
+    items:
+      - { texto: "Trazado profesional.", icono: "fa-bezier-curve" }
+      - { texto: "SVG, EPS, PDF.", icono: "fa-file-vector" }
+    boton_texto: "Contratar"
+
+  - nombre: "Pack Profesional"
+    precio_clp: "29.990"
+    precio_usd: "32"
+    items:
+      - { texto: "3 Propuestas.", icono: "fa-layer-group" }
+      - { texto: "Manual de uso.", icono: "fa-book-open" }
+    boton_texto: "Contratar"
+
+  - nombre: "Profesional Pro"
+    destacado: true
+    precio_clp: "44.990"
+    precio_usd: "48"
+    badge: "¡El más completo!"
+    items:
+      - { texto: "Logo + Firma + Tarjeta.", icono: "fa-check-double" }
+    boton_texto: "Lo quiero todo"

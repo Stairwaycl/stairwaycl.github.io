@@ -1,0 +1,54 @@
+<!-- NAVEGACIÓN CON DROPDOWN DINÁMICO -->
+<nav class="navbar navbar-expand-lg fixed-top stairway-navbar py-2">
+  <div class="container">
+    <a href="{{ '/' | relative_url }}" class="navbar-brand d-flex align-items-center logo-glow">
+      <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Stairway Logo" style="height: 100px; width: auto; object-fit: contain;">
+    </a>
+
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-center">
+
+        {% for item in site.data.navigation %}
+          {% if item.subcategories %}
+            <!-- RENDERIZA DROPDOWN SI TIENE SUBCATEGORÍAS -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle px-3 small fw-bold text-uppercase nav-link-glow"
+                 href="#" id="navbarDropdown{{ forloop.index }}" role="button"
+                 data-bs-toggle="dropdown" aria-expanded="false">
+                {{ item.name }}
+              </a>
+              <ul class="dropdown-menu shadow-lg border-0 bg-dark" aria-labelledby="navbarDropdown{{ forloop.index }}">
+                {% for sub in item.subcategories %}
+                <li>
+                  <a class="dropdown-item text-white-50 small fw-bold" href="{{ sub.link | relative_url }}">
+                    {{ sub.name }}
+                  </a>
+                </li>
+                {% endfor %}
+              </ul>
+            </li>
+          {% else %}
+            <!-- RENDERIZA ENLACE SIMPLE -->
+            <li class="nav-item">
+              <a href="{{ item.link | relative_url }}"
+                 class="nav-link px-3 small fw-bold text-uppercase nav-link-glow {% if page.url == item.link %}active{% endif %}">
+                {{ item.name }}
+              </a>
+            </li>
+          {% endif %}
+        {% endfor %}
+
+        <!-- BOTÓN DE CONTACTO -->
+        <li class="nav-item ms-lg-3">
+          <a href="https://wa.me/56929825990" class="btn btn-gold rounded-pill px-4 fw-bold shadow-sm" role="button">
+            Contáctanos
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,91 @@
+---
+layout: default
+title: "Ingeniería de Software, Ruby on Rails y Aplicaciones Escalables | Stairway SpA"
+description: "Expertos en desarrollo Ruby on Rails y JavaScript. Creamos aplicaciones web escalables, sistemas backend robustos y sitios estáticos de alto rendimiento. De la idea al código."
+image: "https://res.cloudinary.com/ddky4mrmg/image/upload/v1762818484/stairway/ecwhtlyccako0greenqe.png"
+---
+
+{% include hero.html %}
+
+<!-- 2. NUESTRAS SOLUCIONES -->
+<section id="nuestras-soluciones" class="py-5 mt-5">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5" style="color: #D4AF37;">Soluciones que Escalan tu Negocio</h2>
+    <div class="row g-4 text-center">
+
+      <!-- Solución 1 -->
+      <div class="col-md-4">
+        <div class="p-4 rounded-4 h-100 card-stairway">
+          <i class="bi bi-graph-up-arrow fs-1 mb-3 d-block" style="color: #D4AF37;"></i>
+          <h4 class="card-title">Automatización & CRM</h4>
+          <p class="card-text">¿Tu negocio depende de Excels desordenados? Creamos paneles a medida para gestionar tus ventas, clientes y stock de forma automática.</p>
+        </div>
+      </div>
+
+      <!-- Solución 2 -->
+      <div class="col-md-4">
+        <div class="p-4 rounded-4 h-100 card-stairway">
+          <i class="bi bi-box-seam fs-1 mb-3 d-block" style="color: #D4AF37;"></i>
+          <h4 class="card-title">Plataformas SaaS</h4>
+          <p class="card-text">Desarrollamos tu propia herramienta digital bajo suscripción. Desde plataformas educativas hasta sistemas de gestión logística.</p>
+        </div>
+      </div>
+
+      <!-- Solución 3 -->
+      <div class="col-md-4">
+        <div class="p-4 rounded-4 h-100 card-stairway">
+          <i class="bi bi-cpu fs-1 mb-3 d-block" style="color: #D4AF37;"></i>
+          <h4 class="card-title">Webs de Ingeniería</h4>
+          <p class="card-text">No usamos plantillas lentas. Construimos sitios optimizados para Google (SEO) que cargan instantáneamente y convierten visitas en dinero.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 3. SECCIÓN PROYECTOS (ETH Warrior) -->
+<section id="software-projects" class="py-5 bg-dark text-white rounded-4 shadow border-top border-bottom border-warning border-opacity-25">
+  <div class="container p-4 text-center">
+    <h2 class="fw-bold mb-4" style="color: #D4AF37;">Prueba de Capacidades Técnicas</h2>
+    <p class="lead mb-5 opacity-75">¿Quieres ver de lo que somos capaces? ETH Warrior es una demostración de nuestra capacidad para manejar lógica en tiempo real y bases de datos dinámicas.</p>
+
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="p-5 border border-warning rounded-4 card-stairway">
+          <i class="bi bi-gamepad fs-1 mb-3 d-block" style="color: #D4AF37;"></i>
+          <h4 class="card-title">ETH Warrior (Full Stack Demo)</h4>
+          <p class="card-text mb-4">Motor de juego multijugador desarrollado en Ruby on Rails + JavaScript.</p>
+          <a href="https://eth-warrior.com" class="btn btn-warning fw-bold px-5 py-2" target="_blank">PROBAR DEMO EN VIVO</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. SERVICIOS TÉCNICOS E INCLUDES -->
+{% include techstack.html %}
+{% include logosprices.html %}
+
+<!-- 5. PRECIOS -->
+<section id="planes-promo" class="pt-5 container">
+  <div class="container text-center pb-5 rounded-4 shadow-lg" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(212,175,55,0.1);">
+      <h2 class="display-5 fw-bold mb-5 pt-4" style="color: #D4AF37;">PLANES DE DESARROLLO Y DISEÑO</h2>
+      <p class="lead mb-5 text-danger fw-bold">Soluciones tecnológicas con precios transparentes y pago único.</p>
+
+      {% include webprices.html %}
+      {% include newprices.html %}
+
+      <p class="mt-4 text-muted-stairway small">*Para proyectos complejos de software (SaaS, CRMs) en Ruby on Rails, los precios se calculan tras una consulta técnica inicial.</p>
+  </div>
+</section>
+
+<section class="py-5 bg-dark text-white text-center rounded-4 shadow border border-warning mt-4 mb-5 mx-3 mx-md-0">
+  <div class="container">
+      <h3 class="mb-4 display-6 fw-bold">¿Listo para construir tu próxima gran idea?</h3>
+      <p class="lead mb-4 opacity-75">Ya sea que necesites una aplicación a medida o un sitio web estático ultrarrápido, estamos listos para programarlo.</p>
+      <button class="btn btn-warning btn-lg fw-bold" data-bs-toggle="offcanvas" data-bs-target="#offcanvasContactoPago">Contáctanos para una consulta técnica</button>
+  </div>
+</section>
+
+{% include offcanvas.html %}

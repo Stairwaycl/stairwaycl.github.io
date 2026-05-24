@@ -1,0 +1,170 @@
+<style>
+    .crypto-info { font-size: 0.65rem; margin-top: 8px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+
+    /* Paleta Verde Tech para Sistemas a Medida */
+    .bg-rails { background-color: #34961b !important; color: white !important; }
+    .text-rails { color: #7cb86d !important; }
+    .card-ror-highlight { border: 2px solid #7cb86d !important; transform: scale(1.02); }
+
+    /* Personalizaciones avanzadas mediante clases limpias */
+    .setup-medida { background-color: #f0fdf4 !important; border-color: #198754 !important; }
+    .setup-badge { background-color: #f0f7ff !important; border-color: #0d6efd !important; }
+
+    /* Badge para destacar el plan de restaurantes */
+    .badge-pop {
+        position: absolute;
+        top: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        font-size: 0.7rem;
+        letter-spacing: 1px;
+    }
+
+    /* Estilo para el add-on técnico */
+    .setup-service {
+        background-color: #f8f9fa;
+        border: 1px dashed #dee2e6;
+        border-radius: 12px;
+        font-size: 0.75rem;
+    }
+
+    /* Barra de redes sociales estilo mockup */
+    .social-footer-bar {
+        background-color: #0f172a;
+        color: #94a3b8;
+        font-size: 0.8rem;
+        letter-spacing: 0.5px;
+    }
+    .social-footer-bar a {
+        color: #94a3b8;
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+    .social-footer-bar a:hover {
+        color: #ffffff;
+    }
+</style>
+
+<div class="row justify-content-center g-4 mb-5">
+    {% for plan in site.data.services.web %}
+
+    {% comment %} Preparación de variables limpias para evitar bloques Liquid dentro de atributos HTML {% endcomment %}
+    {% assign es_medida = false %}
+    {% if plan.nombre == 'SISTEMAS A MEDIDA' %}{% assign es_medida = true %}{% endif %}
+
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm rounded-4 border-0 {{ plan.card_border }} position-relative">
+
+            {% if plan.badge %}
+            <span class="badge rounded-pill bg-primary badge-pop px-3 py-2 shadow-sm fw-bold text-uppercase">
+                {{ plan.badge }}
+            </span>
+            {% endif %}
+
+            <div class="card-header text-center py-3 rounded-top-4 border-0 {{ plan.estilo }}">
+                <h3 class="h5 mb-0 fw-bold">{{ plan.nombre }}</h3>
+                <p class="small mb-0 opacity-75">{{ plan.subtitulo }}</p>
+            </div>
+
+            <div class="card-body p-4 text-center d-flex flex-column">
+
+                <div class="display-6 fw-bold mb-1 {% if es_medida %}text-rails{% else %}text-dark{% endif %}">
+                    ${{ plan.precio_clp }}
+                </div>
+                <p class="small text-muted mb-2">{{ plan.pago_texto }}</p>
+
+                {% if plan.suscripcion_clp %}
+                <div class="h4 fw-bold mb-0 text-dark">
+                    ${{ plan.suscripcion_clp }} <span class="fs-6 text-muted">/ mes</span>
+                </div>
+                <p class="small text-muted mb-3">{{ plan.suscripcion_texto }}</p>
+                {% endif %}
+
+                <hr class="mt-2">
+
+                <ul class="list-unstyled text-start small mb-auto">
+                    {% for item in plan.items %}
+                    <li class="mb-2">
+                        <i class="bi {{ item.icono }} {{ item.color }} me-2"></i>
+                        {% if item.bold %}<strong>{% endif %}
+                        {{ item.texto }}
+                        {% if item.bold %}</strong>{% endif %}
+                    </li>
+                    {% endfor %}
+                </ul>
+
+                {% comment %} Manejo de clases dinámicas simplificado sin condicionales inline {% endcomment %}
+                {% assign setup_clase = "" %}
+                {% if plan.badge %}
+                    {% assign setup_clase = "setup-badge" %}
+                {% elsif es_medida %}
+                    {% assign setup_clase = "setup-medida" %}
+                {% endif %}
+
+                <div class="setup-service p-2 my-3 text-start {{ setup_clase }}">
+                    <div class="fw-bold text-dark">
+                        <i class="bi {% if es_medida %}bi-cloud-arrow-up-fill{% else %}bi-gear-fill{% endif %} me-1"></i>
+                        {{ plan.setup_label }}:
+                    </div>
+                    <div class="text-muted">{{ plan.setup_precio }}</div>
+                </div>
+
+                {% comment %} Normalización del botón de acción {% endcomment %}
+                {% assign btn_clase_final = "btn-outline-dark" %}
+                {% if plan.boton_clase %}
+                    {% assign btn_clase_final = plan.boton_clase %}
+                {% elsif es_medida %}
+                    {% assign btn_clase_final = "btn-success" %}
+                {% endif %}
+
+                <button class="btn btn-sm w-100 rounded-pill fw-bold shadow mb-2 {{ btn_clase_final }}"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasContactoPago">
+                    {{ plan.boton_texto }}
+                </button>
+
+                {% if plan.boton_suscripcion_url != "" and plan.boton_suscripcion_url != nil %}
+                <a href="{{ plan.boton_suscripcion_url }}"
+                   target="_blank"
+                   class="btn btn-sm btn-primary w-100 rounded-pill fw-bold shadow style-mp"
+                   style="background: #009ee3; border-color: #009ee3; color: white;">
+                    <i class="bi bi-credit-card-2-front me-1"></i> {{ plan.boton_suscripcion_texto }}
+                </a>
+                {% elsif plan.suscripcion_clp and es_medida %}
+                <button class="btn btn-sm btn-secondary w-100 rounded-pill fw-bold" disabled>
+                    {{ plan.boton_suscripcion_texto }}
+                </button>
+                {% endif %}
+
+                {% if plan.crypto %}
+                <div class="crypto-info {% if es_medida %}text-rails{% else %}text-muted{% endif %}">
+                    <i class="fa-brands fa-ethereum"></i> Red Base / <i class="fa-brands fa-bitcoin"></i> Nativa
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="social-footer-bar rounded-4 p-3 d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 shadow-sm">
+            <div class="fw-bold text-white text-uppercase small">
+                <i class="fa-brands fa-ethereum me-1"></i> Red Base / <i class="fa-brands fa-bitcoin me-1"></i> Nativa
+            </div>
+            <div class="d-flex flex-wrap justify-content-center gap-4">
+                <a href="https://instagram.com/redbase/nativa" target="_blank">
+                    <i class="bi bi-instagram me-1 text-danger"></i> @stairway_chile
+                </a>
+                <a href="https://wa.me/+56929825990" target="_blank">
+                    <i class="bi bi-whatsapp me-1 text-success"></i> +56929825990
+                </a>
+                <a href="https://stairwaycl.github.io" target="_blank">
+                    <i class="bi bi-globe me-1 text-info"></i> @web
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

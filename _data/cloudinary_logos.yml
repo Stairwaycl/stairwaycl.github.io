@@ -1,0 +1,33 @@
+isotype:
+  - id: stairway/saztolca2obesen06inl
+    url: https://res.cloudinary.com/ddky4mrmg/image/upload/v1762817094/stairway/saztolca2obesen06inl.png
+    alt: diversion
+  - id: stairway/mowbckuedidlufduubad
+    url: https://res.cloudinary.com/ddky4mrmg/image/upload/v1762817735/stairway/ypvobal6xsqx8sbpvn4z.png
+    alt: trigo
+  - id: stairway/rofrecixmxuzyua2kjyu
+    url: https://res.cloudinary.com/ddky4mrmg/image/upload/v1762817733/stairway/uusw6shefxxlno11u8wk.png
+    alt: 7laws
+  - id: stairway/fwaspzb05rikinett7b1
+    url: https://res.cloudinary.com/ddky4mrmg/image/upload/v1762817728/stairway/mdxctf7qs3eulktnvynz.png
+    alt: llave-casa
+  - id: stairway/lxmdmruih19coibtbi4o
+    url: https://res.cloudinary.com/ddky4mrmg/image/upload/v1762817726/stairway/jvcg7rpswaskpsv1obad.png
+    alt: libro-planta
+  - id: stairway/rzmekmqj9s5pi7ixim6y
+    url: https://res.cloudinary.com/ddky4mrmg/image/upload/v1762817715/stairway/uxudtfktled9opyb8fwy.png
+    alt: gobierno
+
+imagotype:
+  - id: stairway/sgcysyunfo6vyngof4ac.png
+    url: https://res.cloudinary.com/ddky4mrmg/image/upload/v1763024048/stairway/sgcysyunfo6vyngof4ac.png
+    alt: financeglobe
+
+favicon:
+  - url: https://res.cloudinary.com/ddky4mrmg/image/upload/v1762818484/stairway/tu_favicon.png
+
+social_images:
+  - id: stairway/ecwhtlyccako0greenqe
+    # Cambiamos f_png por f_jpg y la extensión final a .jpg
+    url: https://res.cloudinary.com/ddky4mrmg/image/upload/w_1200,h_630,c_fill,g_auto,q_auto:eco,f_jpg/v1762818484/stairway/ecwhtlyccako0greenqe.jpg
+    alt: Imagen principal para redes sociales

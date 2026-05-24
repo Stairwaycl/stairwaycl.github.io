@@ -1,0 +1,18 @@
+# .gitignore
+# Directorios de compilación y caché
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata/
+vendor/
+
+# Archivos específicos a ignorar
+firma2.html
+upload.rb
+README.md
+searcher.rb
+aprobados_1h.txt
+panel_prospeccion.html
+
+# Ignora la carpeta de borradores por completo
+_drafts/

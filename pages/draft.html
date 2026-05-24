@@ -1,0 +1,213 @@
+---
+layout: default
+permalink: /draft/
+---
+
+<style>
+/* ------------------------------------------- */
+/* CSS Específico para la sección de Precios */
+/* ------------------------------------------- */
+.price-section {
+    padding: 50px 0;
+    background-color: #f8f9fa; /* Gris claro de Bootstrap */
+}
+
+.price-card {
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #fff;
+    height: 100%; /* Asegura que todas las tarjetas tengan la misma altura */
+}
+
+.price-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.price-header-com {
+    background-color: #ff3ff6; /* Fucsia de tu marca */
+    color: white;
+    padding: 1rem 0;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.price-header-logo {
+    background-color: #000000; /* Negro para el contraste del logo */
+    color: white;
+    padding: 1rem 0;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.price-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ff3ff6; /* Precio destacado en Fucsia */
+    margin-bottom: 0;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.feature-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.feature-list i {
+    color: #ff3ff6; /* Iconos en Fucsia */
+    margin-right: 8px;
+}
+
+.pack-pro {
+    border: 3px solid #ff3ff6 !important; /* Resalta el paquete PRO */
+}
+</style>
+
+<section id="servicios-precios" class="price-section">
+    <div class="container">
+        <h2 class="text-center mb-5">Nuestros Servicios y Paquetes de Identidad</h2>
+
+        <h3 class="text-center mb-4">Diseño de Comunicación (Digital y Físico)</h3>
+        <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+
+            <div class="col">
+                <div class="card price-card">
+                    <div class="price-header-com text-center">
+                        <i class="fas fa-id-card fa-2x mb-2"></i>
+                        <h5>Tarjetas de Presentación</h5>
+                    </div>
+                    <div class="card-body text-center">
+                        <p class="price-value">$12.990</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle"></i> Diseño de arte final.</li>
+                            <li><i class="fas fa-check-circle"></i> Archivo listo para imprenta (PDF/ODG).</li>
+                            <li><i class="fas fa-check-circle"></i> Configuración de márgenes.</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline-dark mt-3">Comprar Diseño</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card price-card">
+                    <div class="price-header-com text-center">
+                        <i class="fas fa-envelope fa-2x mb-2"></i>
+                        <h5>Firma Corporativa Email</h5>
+                    </div>
+                    <div class="card-body text-center">
+                        <p class="price-value">$17.990</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle"></i> Diseño basado en tu logo.</li>
+                            <li><i class="fas fa-check-circle"></i> Entrega en formato funcional (HTML/Imagen).</li>
+                            <li><i class="fas fa-check-circle"></i> Coherencia de marca digital.</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline-dark mt-3">Comprar Diseño</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card price-card pack-pro">
+                    <div class="price-header-com text-center">
+                        <i class="fas fa-gift fa-2x mb-2"></i>
+                        <h5 class="fw-bold">PACK Coherencia Comunicacional</h5>
+                    </div>
+                    <div class="card-body text-center">
+                        <p class="price-value">$24.990</p>
+                        <span class="badge bg-dark mb-3">¡Ahorras $5.990 CLP!</span>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle"></i> Diseño de Tarjetas de Presentación.</li>
+                            <li><i class="fas fa-check-circle"></i> Firma Corporativa de Email.</li>
+                            <li><i class="fas fa-check-circle"></i> **Solución 360°** de comunicación diaria.</li>
+                        </ul>
+                        <a href="#" class="btn btn-dark mt-3">Contratar Pack</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="text-center mb-4">Diseño y Archivos Técnicos (Logos)</h3>
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+
+            <div class="col">
+                <div class="card price-card">
+                    <div class="price-header-logo text-center">
+                        <i class="fas fa-pen-nib fa-2x mb-2"></i>
+                        <h6>Basic Package</h6>
+                    </div>
+                    <div class="card-body text-center">
+                        <p class="price-value">$16.990</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-circle-notch"></i> **1** Propuesta de Logo.</li>
+                            <li><i class="fas fa-circle-notch"></i> Archivos PNG (Web).</li>
+                            <li><i class="fas fa-circle-notch"></i> Guía de Uso Básico.</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline-secondary mt-3">Ver Detalles</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card price-card">
+                    <div class="price-header-logo text-center">
+                        <i class="fas fa-layer-group fa-2x mb-2"></i>
+                        <h6>Vectorization Only</h6>
+                    </div>
+                    <div class="card-body text-center">
+                        <p class="price-value">$24.990</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-circle-notch"></i> Trazado profesional de logo existente.</li>
+                            <li><i class="fas fa-circle-notch"></i> Archivos **Vectoriales** (SVG, EPS, PDF).</li>
+                            <li><i class="fas fa-circle-notch"></i> Configuración SII (Chile).</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline-secondary mt-3">Contratar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card price-card">
+                    <div class="price-header-logo text-center">
+                        <i class="fas fa-magic fa-2x mb-2"></i>
+                        <h6>Professional Package</h6>
+                    </div>
+                    <div class="card-body text-center">
+                        <p class="price-value">$29.990</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-circle-notch"></i> **3** Propuestas de diseño original.</li>
+                            <li><i class="fas fa-circle-notch"></i> Archivos Vectoriales y Web.</li>
+                            <li><i class="fas fa-circle-notch"></i> Guía de Uso Completa.</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline-secondary mt-3">Contratar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card price-card pack-pro">
+                    <div class="price-header-logo text-center bg-dark">
+                        <i class="fas fa-medal fa-2x mb-2 text-warning"></i>
+                        <h6 class="fw-bold">Professional Pro Package</h6>
+                    </div>
+                    <div class="card-body text-center">
+                        <p class="price-value text-dark">$44.990</p>
+                        <span class="badge bg-danger mb-3">¡Ahorras $15.980 CLP!</span>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check"></i> **Logo Professional** ($29.990).</li>
+                            <li><i class="fas fa-check"></i> **Firma Email** ($17.990).</li>
+                            <li><i class="fas fa-check"></i> **Tarjetas** ($12.990).</li>
+                            <li><i class="fas fa-check"></i> **Solución de Identidad 360°**</li>
+                        </ul>
+                        <a href="#" class="btn btn-dark mt-3">¡El Más Completo!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

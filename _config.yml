@@ -1,0 +1,83 @@
+# ==========================================
+# SITE SETTINGS
+# ==========================================
+title: "Stairway SpA | Ingeniería de Software y Aplicaciones Web Escalables"
+email: stairway.cl@gmail.com
+description: >-
+  Expertos en desarrollo Ruby on Rails y JavaScript. Creamos aplicaciones web personalizadas,
+  SaaS escalables y experiencias interactivas. De la identidad visual al código de alto rendimiento.
+
+# URLs
+url: "https://stairwaycl.github.io"
+baseurl: ""
+
+# ==========================================
+# SEO & SOCIAL (Configuración estándar para jekyll-seo-tag)
+# ==========================================
+# El plugin usa 'image' para og:image automáticamente
+image: "https://res.cloudinary.com/ddky4mrmg/image/upload/w_1200,h_630,c_fill,g_auto,q_auto:eco,f_jpg/v1762818484/stairway/ecwhtlyccako0greenqe.jpg"
+
+author:
+  name: "Stairway SpA"
+  twitter: "stairwaycl"
+
+social:
+  name: "Stairway SpA"
+  links:
+    - https://www.linkedin.com/company/stairwaycl
+    - https://www.instagram.com/stairwaycl
+    - https://www.facebook.com/stairwaycl
+    - https://github.com/stairwaycl
+
+# Proyecto Destacado
+featured_project:
+  name: "ETH - WARRIOR"
+  url: "https://eth-warrior.com"
+  description: "Juego multijugador PvP basado en blockchain (Red Base) desarrollado íntegramente por nuestro equipo."
+
+github_username: stairwaycl
+
+# ==========================================
+# URL ESTRUCTURA
+# ==========================================
+permalink: /blog/:title/
+excerpt_separator: ""
+
+# ==========================================
+# BUILD SETTINGS
+# ==========================================
+show_drafts: false
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-admin
+
+collections:
+  authors:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
+      permalink: /authors/:name/
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: "pages"
+    values:
+      permalink: /:name/
+
+paginate: 6
+paginate_path: "/blog/page:num/"

@@ -1,0 +1,84 @@
+.hero-full {
+  /* Ocupa el 100% de la altura de la pantalla */
+  min-height: 100vh;
+
+  /* Centrado total del contenido */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Fondo oscuro con el gradiente que definimos antes */
+  background: radial-gradient(circle at center, #1a1a1a 0%, #0d0d0d 40%, #fa5454 100%);
+
+  /* Ajuste para que no quede un hueco blanco si el navbar es fijo */
+  padding-top: 80px;
+}
+
+.hero-content {
+  /* Un pequeño extra de sombra al texto para que resalte sobre el fondo */
+  text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo para el botón de contorno blanco si no lo tenías */
+.btn-outline-light {
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  &:hover {
+    background-color: white;
+    color: black !important;
+  }
+}
+
+/* --- HERO FULL HEIGHT --- */
+.hero-full {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, #1a1a1a 0%, #0d0d0d 40%, #050505 100%);
+}
+
+/* --- ESTILO REDES SOCIALES --- */
+.social-links-hero .social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  margin: 0 8px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.3rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-links-hero .social-btn:hover {
+  color: #D4AF37;
+  border-color: #D4AF37;
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.4); /* Brillo dorado */
+}
+
+
+/* El cursor que parpadea al final del texto */
+#typewriter-hero::after {
+  content: '|';
+  animation: blink 0.7s infinite;
+  color: #D4AF37; /* El dorado de Stairway */
+}
+
+@keyframes blink {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+#typewriter-hero {
+  /* Reserva el espacio vertical para el texto completo */
+  min-height: 2.4em;
+  /* Evita que el contenedor colapse cuando está vacío */
+  display: block;
+  /* Centrado manual si es necesario para evitar saltos horizontales */
+  margin-left: auto;
+  margin-right: auto;
+}
