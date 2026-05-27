@@ -41,7 +41,7 @@ github_username: stairwaycl
 # URL ESTRUCTURA
 # ==========================================
 permalink: /blog/:title/
-excerpt_separator: ""
+excerpt_separator: "\n\n"
 
 # ==========================================
 # BUILD SETTINGS
