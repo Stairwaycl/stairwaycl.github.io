@@ -1,5 +1,5 @@
 <style>
-    .crypto-info { font-size: 0.65rem; margin-top: 8px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+    .crypto-info { font-size: 0.65rem; margin-top: 8px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: rgba(255,255,255,0.5); }
 
     /* Paleta Verde Tech para Sistemas a Medida */
     .bg-rails { background-color: #34961b !important; color: white !important; }
@@ -7,10 +7,10 @@
     .card-ror-highlight { border: 2px solid #7cb86d !important; transform: scale(1.02); }
 
     /* Personalizaciones avanzadas mediante clases limpias */
-    .setup-medida { background-color: #f0fdf4 !important; border-color: #198754 !important; }
-    .setup-badge { background-color: #f0f7ff !important; border-color: #0d6efd !important; }
+    .setup-medida { background-color: rgba(52, 150, 27, 0.15) !important; border-color: #198754 !important; }
+    .setup-badge { background-color: rgba(13, 110, 253, 0.15) !important; border-color: #0d6efd !important; }
 
-    /* Badge para destacar el plan de restaurantes */
+    /* Badge para destacar el plan */
     .badge-pop {
         position: absolute;
         top: -12px;
@@ -23,13 +23,16 @@
 
     /* Estilo para el add-on técnico */
     .setup-service {
-        background-color: #f8f9fa;
-        border: 1px dashed #dee2e6;
+        background-color: rgba(255, 255, 255, 0.04) !important;
+        border: 1px dashed rgba(212, 175, 55, 0.3) !important;
         border-radius: 12px;
         font-size: 0.75rem;
     }
 
-    /* Barra de redes sociales estilo mockup */
+    .setup-service .fw-bold { color: #D4AF37 !important; }
+    .setup-service .text-muted { color: rgba(255,255,255,0.5) !important; }
+
+    /* Barra de redes sociales */
     .social-footer-bar {
         background-color: #0f172a;
         color: #94a3b8;
@@ -44,12 +47,35 @@
     .social-footer-bar a:hover {
         color: #ffffff;
     }
+
+    /* Tarjetas de precios */
+    .card {
+        background: rgba(255, 255, 255, 0.03) !important;
+        border: 1px solid rgba(212, 175, 55, 0.1) !important;
+        color: #ffffff !important;
+    }
+
+    .card-header {
+        background: rgba(212, 175, 55, 0.1) !important;
+        border-bottom: 1px solid rgba(212, 175, 55, 0.2) !important;
+    }
+
+    .card-header h3,
+    .card-header p { color: #ffffff !important; }
+
+    .card-body .display-6,
+    .card-body .h4 { color: #D4AF37 !important; }
+
+    .card-body .text-dark { color: #ffffff !important; }
+    .card-body .text-muted { color: rgba(255,255,255,0.5) !important; }
+    .card-body ul li { color: rgba(255,255,255,0.8) !important; }
+    .card-body strong { color: #ffffff !important; }
+    .card-body hr { border-color: rgba(212, 175, 55, 0.2) !important; }
 </style>
 
 <div class="row justify-content-center g-4 mb-5">
     {% for plan in site.data.services.web %}
 
-    {% comment %} Preparación de variables limpias para evitar bloques Liquid dentro de atributos HTML {% endcomment %}
     {% assign es_medida = false %}
     {% if plan.nombre == 'SISTEMAS A MEDIDA' %}{% assign es_medida = true %}{% endif %}
 
@@ -69,13 +95,13 @@
 
             <div class="card-body p-4 text-center d-flex flex-column">
 
-                <div class="display-6 fw-bold mb-1 {% if es_medida %}text-rails{% else %}text-dark{% endif %}">
+                <div class="display-6 fw-bold mb-1 {% if es_medida %}text-rails{% else %}text-warning{% endif %}">
                     ${{ plan.precio_clp }}
                 </div>
                 <p class="small text-muted mb-2">{{ plan.pago_texto }}</p>
 
                 {% if plan.suscripcion_clp %}
-                <div class="h4 fw-bold mb-0 text-dark">
+                <div class="h4 fw-bold mb-0 text-warning">
                     ${{ plan.suscripcion_clp }} <span class="fs-6 text-muted">/ mes</span>
                 </div>
                 <p class="small text-muted mb-3">{{ plan.suscripcion_texto }}</p>
@@ -94,7 +120,6 @@
                     {% endfor %}
                 </ul>
 
-                {% comment %} Manejo de clases dinámicas simplificado sin condicionales inline {% endcomment %}
                 {% assign setup_clase = "" %}
                 {% if plan.badge %}
                     {% assign setup_clase = "setup-badge" %}
@@ -103,15 +128,14 @@
                 {% endif %}
 
                 <div class="setup-service p-2 my-3 text-start {{ setup_clase }}">
-                    <div class="fw-bold text-dark">
+                    <div class="fw-bold">
                         <i class="bi {% if es_medida %}bi-cloud-arrow-up-fill{% else %}bi-gear-fill{% endif %} me-1"></i>
                         {{ plan.setup_label }}:
                     </div>
                     <div class="text-muted">{{ plan.setup_precio }}</div>
                 </div>
 
-                {% comment %} Normalización del botón de acción {% endcomment %}
-                {% assign btn_clase_final = "btn-outline-dark" %}
+                {% assign btn_clase_final = "btn-outline-warning" %}
                 {% if plan.boton_clase %}
                     {% assign btn_clase_final = plan.boton_clase %}
                 {% elsif es_medida %}
@@ -127,7 +151,7 @@
                 {% if plan.boton_suscripcion_url != "" and plan.boton_suscripcion_url != nil %}
                 <a href="{{ plan.boton_suscripcion_url }}"
                    target="_blank"
-                   class="btn btn-sm btn-primary w-100 rounded-pill fw-bold shadow style-mp"
+                   class="btn btn-sm w-100 rounded-pill fw-bold shadow"
                    style="background: #009ee3; border-color: #009ee3; color: white;">
                     <i class="bi bi-credit-card-2-front me-1"></i> {{ plan.boton_suscripcion_texto }}
                 </a>
@@ -138,7 +162,7 @@
                 {% endif %}
 
                 {% if plan.crypto %}
-                <div class="crypto-info {% if es_medida %}text-rails{% else %}text-muted{% endif %}">
+                <div class="crypto-info {% if es_medida %}text-rails{% endif %}">
                     <i class="fa-brands fa-ethereum"></i> Red Base / <i class="fa-brands fa-bitcoin"></i> Nativa
                 </div>
                 {% endif %}
@@ -161,8 +185,8 @@
                 <a href="https://wa.me/+56929825990" target="_blank">
                     <i class="bi bi-whatsapp me-1 text-success"></i> +56929825990
                 </a>
-                <a href="https://stairwaycl.github.io" target="_blank">
-                    <i class="bi bi-globe me-1 text-info"></i> @web
+                <a href="https://stairway.cl" target="_blank">
+                    <i class="bi bi-globe me-1 text-info"></i> stairway.cl
                 </a>
             </div>
         </div>

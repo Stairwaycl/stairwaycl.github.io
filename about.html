@@ -31,7 +31,7 @@ title: "Sobre Nosotros | Ingeniería Stairway"
             <div class="card h-100 p-4 text-center card-stairway">
                 <span class="fs-1 mb-2 d-block">🛡️</span>
                 <h3 class="h5 card-title fw-bold">Nuestra Visión</h3>
-                <p class="card-text">Ser el aliado técnico preferido para empresas que buscan software a medida que no dependa de licencias de terceros, garantizando propiedad total del código.</p>
+                <p class="card-text">Ser el aliado técnico preferido para empresas que buscan software a medida, sin depender de licencias de terceros y con propiedad total del código.</p>
             </div>
         </div>
 
@@ -47,49 +47,61 @@ title: "Sobre Nosotros | Ingeniería Stairway"
             </div>
         </div>
     </div>
-</section>
+  </section>
 
-<section class="py-4">
-  <h2 class="border-bottom pb-2 mb-4 fw-bold text-center" style="color: #D4AF37;">
-    Liderazgo Técnico
-  </h2>
-  <p class="text-center mb-5">Expertos en el stack Ruby, JavaScript y optimización de sistemas estáticos.</p>
+  <section class="py-4">
+    <h2 class="border-bottom pb-2 mb-4 fw-bold text-center" style="color: #D4AF37;">
+      Liderazgo Técnico
+    </h2>
+    <p class="text-center mb-5">Expertos en el stack Ruby, JavaScript y optimización de sistemas estáticos.</p>
 
-  {% for author in site.authors %}
-    <div class="row justify-content-center {% if forloop.index > 1 %}pt-4{% endif %}">
-        <div class="col-lg-8 col-md-10">
-            <div class="card p-4 border-start border-5 border-warning h-100 rounded-4 card-stairway">
-                <div class="row align-items-center">
-                    <div class="col-md-3 text-center">
-                        <div class="mx-auto bg-dark text-gold rounded-circle d-flex align-items-center justify-content-center border border-warning shadow-sm" style="width: 100px; height: 100px; font-size: 2.5rem; color: #D4AF37;">
-                            {{ author.name | slice: 0, 1 | upcase }}
-                        </div>
-                    </div>
-                    <div class="col-md-9">
-                        <h3 class="h4 card-title fw-bold mt-3 mt-md-0">{{ author.name }}</h3>
-                        <h4 class="small text-uppercase mb-3 fw-bold" style="color: #D4AF37;">{{ author.position }}</h4>
-                        <div class="card-text">
-                            {{ author.content | markdownify }}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-  {% endfor %}
-</section>
+    {% for author in site.authors %}
+      <div class="row justify-content-center {% if forloop.index > 1 %}pt-4{% endif %}">
+          <div class="col-lg-8 col-md-10">
+              <div class="card p-4 border-start border-5 border-warning h-100 rounded-4 card-stairway">
+                  <div class="row align-items-center">
+                      <div class="col-md-3 text-center">
+                          <div class="mx-auto bg-dark text-gold rounded-circle d-flex align-items-center justify-content-center border border-warning shadow-sm" style="width: 100px; height: 100px; font-size: 2.5rem; color: #D4AF37;">
+                              {{ author.name | slice: 0, 1 | upcase }}
+                          </div>
+                      </div>
+                      <div class="col-md-9">
+                          <h3 class="h4 card-title fw-bold mt-3 mt-md-0">{{ author.name }}</h3>
+                          <h4 class="small text-uppercase mb-3 fw-bold" style="color: #D4AF37;">{{ author.position }}</h4>
+                          <div class="card-text">
+                              {{ author.content | markdownify }}
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    {% endfor %}
+  </section>
 
-<!-- SECCIÓN EXTRA PARA MOSTRAR CAPACIDAD TÉCNICA -->
-<section class="mt-5 p-4 bg-dark text-white rounded-4 shadow border border-warning">
-    <div class="row align-items-center">
-        <div class="col-md-8">
-            <h4 class="fw-bold text-warning">Casos de Éxito: Motor de Juegos Web</h4>
-            <p class="small mb-0 opacity-75">No solo hacemos sitios informativos. Hemos desarrollado motores de juegos 1v1 basados en habilidades (Skill-based) integrando lógica de backend en tiempo real y transacciones seguras. Si podemos construir un juego multijugador, podemos construir tu próximo software empresarial.</p>
-        </div>
-        <div class="col-md-4 text-end">
-            <a href="https://eth-warrior.com" target="_blank" class="btn btn-outline-warning mt-3 mt-md-0">Ver Proyecto Demo</a>
-        </div>
-    </div>
-</section>
+  <!-- SECCIÓN VENDECON -->
+  <section class="mt-5 p-4 rounded-4 shadow border border-warning" style="background: rgba(212, 175, 55, 0.05);">
+      <div class="row align-items-center">
+          <div class="col-md-8">
+              <h4 class="fw-bold" style="color: #D4AF37;">
+                  <i class="bi bi-shop me-2"></i>VendeCon · Tu página web gratis en minutos
+              </h4>
+              <p class="small mb-2 opacity-75">
+                  VendeCon es nuestro producto propio: una plataforma donde emprendedores y pymes de Chile pueden crear su página web gratis y empezar a recibir clientes nuevos. Sin conocimientos técnicos, sin tarjeta de crédito.
+              </p>
+              <p class="small mb-0 opacity-75">
+                  Construido con Ruby on Rails y en crecimiento activo. Otro ejemplo de lo que desarrollamos en Stairway.
+              </p>
+          </div>
+          <div class="col-md-4 text-end d-flex flex-column gap-2 align-items-md-end mt-3 mt-md-0">
+              <a href="https://vendecon.stairway.cl" target="_blank" class="btn btn-warning rounded-pill px-4 fw-bold">
+                  <i class="bi bi-rocket-takeoff me-1"></i> Crear mi página gratis
+              </a>
+              <a href="https://vendecon.stairway.cl" target="_blank" class="btn btn-outline-warning rounded-pill px-4 small">
+                  Ver la plataforma
+              </a>
+          </div>
+      </div>
+  </section>
 
 </div>
