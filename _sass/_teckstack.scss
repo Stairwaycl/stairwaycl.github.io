@@ -1,0 +1,79 @@
+// Tarjetas de precios - texto
+.card-body {
+  .display-6,
+  .h4,
+  .text-dark {
+    color: #D4AF37 !important;
+  }
+  .text-muted {
+    color: rgba(255, 255, 255, 0.5) !important;
+  }
+  .list-unstyled li {
+    color: rgba(255, 255, 255, 0.8) !important;
+  }
+  strong {
+    color: #ffffff !important;
+  }
+}
+
+// Header de cada tarjeta
+.card-header h3,
+.card-header p {
+  color: #ffffff !important;
+}
+
+// Fondo oscuro de tarjetas Bootstrap
+.card {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(212, 175, 55, 0.1) !important;
+  color: #ffffff !important;
+
+  .card-header {
+    background: rgba(212, 175, 55, 0.1) !important;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2) !important;
+    h3, p { color: #ffffff !important; }
+  }
+
+  .card-body {
+    hr { border-color: rgba(212, 175, 55, 0.2) !important; }
+  }
+}
+
+// icon-box texto
+.icon-box {
+  h3, .h5 { color: #ffffff !important; }
+
+  p.small, .text-muted {
+    color: rgba(255, 255, 255, 0.6) !important;
+  }
+
+  a.text-muted {
+    color: rgba(212, 175, 55, 0.6) !important;
+    &:hover { color: #D4AF37 !important; }
+  }
+}
+
+// Setup service box
+.setup-service {
+  background-color: rgba(255, 255, 255, 0.04) !important;
+  border: 1px dashed rgba(212, 175, 55, 0.3) !important;
+
+  .fw-bold { color: #D4AF37 !important; }
+  .text-muted { color: rgba(255, 255, 255, 0.5) !important; }
+}
+
+// Badge popular
+.badge-pop {
+  background: #D4AF37 !important;
+  color: #000 !important;
+}
+
+// Social footer bar
+.social-footer-bar {
+  .text-muted { color: rgba(255, 255, 255, 0.6) !important; }
+}
+
+// Crypto info
+.crypto-info {
+  color: rgba(255, 255, 255, 0.5) !important;
+}

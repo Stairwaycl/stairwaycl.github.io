@@ -1,43 +1,42 @@
 <style>
-    /* Efecto de movimiento para servicios de identidad */
-    .card-identity {
-        transition: all 0.3s ease-in-out;
-        border-radius: 1rem;
-        background-color: #ffffff;
-        cursor: pointer;
-    }
+  .card-identity {
+    transition: all 0.3s ease-in-out;
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(212, 175, 55, 0.1) !important;
+    cursor: pointer;
+  }
 
-    .card-identity:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 12px 25px rgba(0,0,0,0.12) !important;
-    }
+  .card-identity:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(212, 175, 55, 0.15) !important;
+    border-color: rgba(212, 175, 55, 0.4) !important;
+  }
 
-    /* Cabeceras de tarjetas */
-    .price-header-com {
-        background-color: #6f42c1;
-        color: white;
-        padding: 1.2rem 0;
-        border-radius: 1rem 1rem 0 0;
-    }
-    .price-header-logo {
-        background-color: #212529;
-        color: white;
-        padding: 1rem 0;
-        border-radius: 1rem 1rem 0 0;
-    }
+  .price-header-com {
+    background-color: #6f42c1;
+    color: white;
+    padding: 1.2rem 0;
+    border-radius: 1rem 1rem 0 0;
+  }
 
-    /* Valores de precio */
-    .price-value { font-size: 1.8rem; font-weight: 700; color: #6f42c1; margin-bottom: 0; line-height: 1.1; }
-    .price-value-dark { font-size: 1.8rem; font-weight: 700; color: #212529; margin-bottom: 0; line-height: 1.1; }
-    .usd-value { font-size: 0.9rem; font-weight: 500; color: #6c757d; display: block; }
+  .price-header-logo {
+    background: rgba(212, 175, 55, 0.15);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    color: #D4AF37;
+    padding: 1rem 0;
+    border-radius: 1rem 1rem 0 0;
+  }
 
-    /* Lista de características */
-    .feature-list { list-style: none; padding: 1.2rem; text-align: left; font-size: 0.85rem; margin-bottom: 0; }
-    .feature-list li { padding: 6px 0; border-bottom: 1px solid #f8f9fa; display: flex; align-items: center; }
-    .feature-list i { margin-right: 10px; width: 20px; text-align: center; }
+  .price-value { font-size: 1.8rem; font-weight: 700; color: #D4AF37; margin-bottom: 0; line-height: 1.1; }
+  .price-value-dark { font-size: 1.8rem; font-weight: 700; color: #D4AF37; margin-bottom: 0; line-height: 1.1; }
+  .usd-value { font-size: 0.9rem; font-weight: 500; color: rgba(255,255,255,0.5); display: block; }
 
-    /* Info Cripto en miniatura */
-    .crypto-small-info { font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 8px; }
+  .feature-list { list-style: none; padding: 1.2rem; text-align: left; font-size: 0.85rem; margin-bottom: 0; }
+  .feature-list li { padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center; color: rgba(255,255,255,0.8); }
+  .feature-list i { margin-right: 10px; width: 20px; text-align: center; }
+
+  .crypto-small-info { font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 8px; color: rgba(255,255,255,0.4); }
 </style>
 
 <section id="servicios-complementarios" class="py-5">
@@ -48,7 +47,6 @@
         <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
             {% for item in site.data.services.identidad_complementos %}
 
-            {% comment %} Aislamiento de lógica para limpiar el HTML {% endcomment %}
             {% assign es_destacado = false %}
             {% if item.destacado %}{% assign es_destacado = true %}{% endif %}
 
@@ -57,17 +55,17 @@
             {% assign icono_clase = "" %}
             {% assign titulo_clase = "" %}
             {% assign precio_clase = "" %}
-            {% assign boton_clase = "btn-outline-primary" %}
+            {% assign boton_clase = "btn-outline-warning" %}
             {% assign crypto_clase = "text-muted" %}
 
             {% if es_destacado %}
-                {% assign card_clase = "border-primary border-2" %}
+                {% assign card_clase = "border-warning border-2" %}
                 {% assign header_clase = "bg-primary" %}
                 {% assign icono_clase = "text-warning" %}
                 {% assign titulo_clase = "fw-bold" %}
-                {% assign precio_clase = "text-primary" %}
-                {% assign boton_clase = "btn-primary fw-bold" %}
-                {% assign crypto_clase = "text-primary" %}
+                {% assign precio_clase = "text-warning" %}
+                {% assign boton_clase = "btn-warning fw-bold" %}
+                {% assign crypto_clase = "text-warning" %}
             {% endif %}
 
             <div class="col">
@@ -85,10 +83,10 @@
                         <div class="badge bg-success rounded-pill mb-3 mx-auto" style="width: fit-content;">¡Ahorra CLP$ {{ item.ahorro }}!</div>
                         {% endif %}
 
-                        <ul class="feature-list text-dark">
+                        <ul class="feature-list">
                             {% for feature in item.items %}
                             <li>
-                                <i class="fa-solid {% if es_destacado %}fa-star text-warning{% else %}fa-circle-check text-primary{% endif %} me-2"></i>
+                                <i class="fa-solid {% if es_destacado %}fa-star text-warning{% else %}fa-circle-check text-warning{% endif %} me-2"></i>
                                 {% if feature.texto %}
                                     {{ feature.texto }}
                                 {% else %}
@@ -116,22 +114,21 @@
         <div class="row row-cols-1 row-cols-md-4 g-4">
             {% for logo in site.data.services.logos %}
 
-            {% comment %} Aislamiento de lógica para el bloque de logotipos {% endcomment %}
             {% assign es_pro = false %}
             {% if logo.pro %}{% assign es_pro = true %}{% endif %}
 
             {% assign logo_card_clase = "shadow-sm border-0" %}
             {% assign logo_titulo_clase = "" %}
-            {% assign logo_boton_clase = "btn-outline-dark" %}
+            {% assign logo_boton_clase = "btn-outline-warning" %}
             {% assign logo_boton_texto = "Contratar" %}
             {% assign logo_crypto_clase = "text-muted" %}
 
             {% if es_pro %}
-                {% assign logo_card_clase = "shadow-lg border-light border-2" %}
+                {% assign logo_card_clase = "shadow-lg border-warning border-2" %}
                 {% assign logo_titulo_clase = "fw-bold" %}
-                {% assign logo_boton_clase = "btn-light fw-bold" %}
+                {% assign logo_boton_clase = "btn-warning fw-bold" %}
                 {% assign logo_boton_texto = "Lo quiero todo" %}
-                {% assign logo_crypto_clase = "text-dark" %}
+                {% assign logo_crypto_clase = "text-warning" %}
             {% endif %}
 
             <div class="col">
@@ -146,10 +143,10 @@
                         <div class="badge bg-danger rounded-pill mb-2 mx-auto" style="width: fit-content;">¡El más completo!</div>
                         {% endif %}
 
-                        <ul class="feature-list text-dark">
+                        <ul class="feature-list">
                             {% for feat in logo.items %}
                             <li>
-                                <i class="fa-solid {% if feat.icono %}{{ feat.icono }}{% elsif es_pro %}fa-check-double text-success{% else %}fa-minus text-secondary{% endif %} me-2"></i>
+                                <i class="fa-solid {% if feat.icono %}{{ feat.icono }}{% elsif es_pro %}fa-check-double text-warning{% else %}fa-minus text-warning{% endif %} me-2"></i>
                                 {% if feat.texto %}
                                     {{ feat.texto }}
                                 {% else %}
