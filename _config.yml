@@ -46,7 +46,7 @@ excerpt_separator: "\n\n"
 # ==========================================
 # BUILD SETTINGS
 # ==========================================
-show_drafts: false
+show_drafts: true
 
 plugins:
   - jekyll-feed
