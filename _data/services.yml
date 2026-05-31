@@ -3,8 +3,8 @@ web:
   - nombre: "LANDING PAGE"
     subtitulo: "Presencia Digital Rápida"
     precio_clp: "49.990"
-    pago_texto: "Pago Único por Desarrollo"
-    suscripcion_clp: "12.000"
+    pago_texto: "Pago Único o"
+    suscripcion_clp: "12.990"
     suscripcion_texto: "Suscripción Mensual"
     estilo: "bg-light"
     items:
@@ -19,16 +19,17 @@ web:
     boton_suscripcion_url: "https://www.mercadopago.cl/subscriptions/checkout?preapproval_plan_id=117a12d83b4a4b5398187500cfb6da23"
     crypto: true
 
-  - nombre: "WEB CORPORATIVA"
+  - nombre: "WEB AUTOGESTIONADA"
     subtitulo: "Catálogo & Web App (PWA)"
     precio_clp: "69.990"
-    pago_texto: "Pago Único por Desarrollo"
-    suscripcion_clp: "15.000"
+    pago_texto: "Pago Único o"
+    suscripcion_clp: "14.990"
     suscripcion_texto: "Suscripción Mensual"
     badge: "Ideal Restaurantes & Delivery"
     estilo: "bg-dark text-white"
     card_border: "border-primary border-2"
     items:
+      - { texto: "Todo lo de Landing-Page", icono: "#", color: "text-primary", bold: true }
       - { texto: "Carrito a WhatsApp", icono: "bi-cart-check", color: "text-primary", bold: true }
       - { texto: "PWA: Instalable como App", icono: "bi-phone", color: "text-success", bold: true }
       - { texto: "Catálogo Autogestionado", icono: "bi-hdd-network", color: "text-danger" }
@@ -44,12 +45,13 @@ web:
   - nombre: "SISTEMAS A MEDIDA"
     subtitulo: "Software & SaaS (RoR)"
     precio_clp: "159.990"
-    pago_texto: "Desde / Cotización"
+    pago_texto: "Desde / Cotización o"
     suscripcion_clp: "20.000"
     suscripcion_texto: "Suscripción Mensual"
     estilo: "bg-rails text-white"
     card_border: "card-ror-highlight"
     items:
+      - { texto: "Todo lo de Web Autogestionada", icono: "#", color: "text-rails" }
       - { texto: "Bases de Datos PostgreSQL", icono: "bi-database", color: "text-rails" }
       - { texto: "Paneles de Administración", icono: "bi-shield-check", color: "text-rails" }
       - { texto: "Automatización de Procesos", icono: "bi-cpu", color: "text-rails" }
