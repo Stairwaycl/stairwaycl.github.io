@@ -1,6 +1,8 @@
 // _sass/_footer.scss
 
 .stairway-footer {
+  position: relative;  // 👈 agregar
+  z-index: 10;
   background-color: #050505 !important;
   border-top: 1px solid rgba(212, 175, 55, 0.15);
   margin-top: auto; // Refuerzo para Flexbox
