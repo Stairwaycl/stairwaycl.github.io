@@ -73,8 +73,13 @@
     .card-body hr { border-color: rgba(212, 175, 55, 0.2) !important; }
 </style>
 
+
+
 <div class="row justify-content-center g-4 mb-5">
-    {% for plan in site.data.services.web %}
+
+
+
+  {% for plan in site.data.services.web %}
 
     {% assign es_medida = false %}
     {% if plan.nombre == 'SISTEMAS A MEDIDA' %}{% assign es_medida = true %}{% endif %}
