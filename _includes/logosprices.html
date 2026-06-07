@@ -1,45 +1,83 @@
 <style>
-  /* Animación para las tarjetas de la sección de Software y Stack */
-  .software-card, .icon-box {
+  .card-identity {
     transition: all 0.3s ease-in-out;
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(212, 175, 55, 0.1) !important;
+    cursor: pointer;
   }
-  .software-card:hover, .icon-box:hover {
+  .card-identity:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2) !important;
+    box-shadow: 0 12px 25px rgba(212, 175, 55, 0.15) !important;
+    border-color: rgba(212, 175, 55, 0.4) !important;
   }
-  /* Estilo para los botones sociales */
-  .social-btn {
-    width: 45px; height: 45px;
-    display: inline-flex; align-items: center; justify-content: center;
-    border-radius: 50%; margin: 0 8px; font-size: 1.2rem;
-    transition: transform 0.2s; color: white; text-decoration: none;
+  .price-header-logo {
+    background: rgba(212, 175, 55, 0.15);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    color: #D4AF37;
+    padding: 1rem 0;
+    border-radius: 1rem 1rem 0 0;
   }
-  .social-btn:hover { transform: scale(1.2); color: white; }
-  .btn-linkedin { background-color: #0077b5; }
-  .btn-instagram { background-color: #e4405f; }
-  .btn-facebook { background-color: #1877f2; }
-  .btn-github { background-color: #333; }
+  .price-value-dark { font-size: 1.8rem; font-weight: 700; color: #D4AF37; margin-bottom: 0; line-height: 1.1; }
+  .usd-value { font-size: 0.9rem; font-weight: 500; color: rgba(255,255,255,0.5); display: block; }
+  .feature-list { list-style: none; padding: 1.2rem; text-align: left; font-size: 0.85rem; margin-bottom: 0; }
+  .feature-list li { padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center; color: rgba(255,255,255,0.8); }
+  .feature-list i { margin-right: 10px; width: 20px; text-align: center; }
+  .crypto-small-info { font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 8px; color: rgba(255,255,255,0.4); }
 </style>
-
-<div class="container pt-5 border-top">
-  <h2 class="text-center fw-bold">Identidad de Marca y Diseño Visual</h2>
-  <p class="text-center mb-4">Un gran software necesita una gran imagen. También ofrecemos servicios completos de branding.</p>
-
-  <div class="logo-gallery">
-  {% assign lista_isotipos = site.data.cloudinary_logos.isotype %}
-  {% for logo in lista_isotipos %}
-    <img class="gallery-item" src="{{ logo.url }}" alt="{{ logo.alt }}">
-  {% endfor %}
-  </div>
-
-  <div class="logo-gallery mt-2">
-  {% assign lista_imagotipos = site.data.cloudinary_logos.imagotype %}
-  {% for logo in lista_imagotipos %}
-    <img class="gallery-item2" src="{{ logo.url }}" alt="{{ logo.alt }}">
-  {% endfor %}
-  </div>
-
-  <div class="text-center mt-3">
-     <p class="text-secondary mb-0">Logos Originales | <strong>5+</strong> Años de Experiencia</p>
-  </div>
+<div class="row row-cols-1 row-cols-md-4 g-4">
+    {% for logo in site.data.services.logos %}
+    {% assign es_pro = false %}
+    {% if logo.destacado %}{% assign es_pro = true %}{% endif %}
+    {% assign logo_card_clase = "shadow-sm border-0" %}
+    {% assign logo_titulo_clase = "" %}
+    {% assign logo_boton_clase = "btn-outline-warning" %}
+    {% assign logo_boton_texto = logo.boton_texto %}
+    {% assign logo_crypto_clase = "text-muted" %}
+    {% if es_pro %}
+        {% assign logo_card_clase = "shadow-lg border-warning border-2" %}
+        {% assign logo_titulo_clase = "fw-bold" %}
+        {% assign logo_boton_clase = "btn-warning fw-bold" %}
+        {% assign logo_boton_texto = "Lo quiero todo" %}
+        {% assign logo_crypto_clase = "text-warning" %}
+    {% endif %}
+    <div class="col">
+        <div class="card h-100 card-identity {{ logo_card_clase }}">
+            <div class="price-header-logo text-center">
+                <h6 class="{{ logo_titulo_clase }} mb-0">{{ logo.nombre }}</h6>
+            </div>
+            <div class="card-body text-center d-flex flex-column">
+                <p class="price-value-dark">CLP$ {{ logo.precio_clp }}<span class="usd-value">/ USD$ {{ logo.precio_usd }}</span></p>
+                {% if logo.badge %}
+                <div class="badge bg-danger rounded-pill mb-2 mx-auto" style="width: fit-content;">{{ logo.badge }}</div>
+                {% endif %}
+                <ul class="feature-list">
+                    {% for feat in logo.items %}
+                    <li>
+                        {% if feat.icono and feat.icono != "#" %}
+                            <i class="fa-solid {{ feat.icono }} text-warning me-2"></i>
+                        {% elsif es_pro %}
+                            <i class="fa-solid fa-check-double text-warning me-2"></i>
+                        {% else %}
+                            <i class="fa-solid fa-minus text-warning me-2"></i>
+                        {% endif %}
+                        {% if feat.texto %}
+                            {{ feat.texto }}
+                        {% else %}
+                            {{ feat }}
+                        {% endif %}
+                    </li>
+                    {% endfor %}
+                </ul>
+                <button type="button" class="btn {{ logo_boton_clase }} btn-sm rounded-pill mt-auto"
+                        data-bs-toggle="offcanvas" data-bs-target="#offcanvasContactoPago">
+                    {{ logo_boton_texto }}
+                </button>
+                <div class="crypto-small-info {{ logo_crypto_clase }}">
+                    <i class="fa-brands fa-bitcoin"></i> Nativa | <i class="fa-brands fa-ethereum"></i> Base
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
 </div>

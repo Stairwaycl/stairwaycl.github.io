@@ -1,6 +1,6 @@
 // _sass/_main.scss
 
-// 1. Fondos Globales (Ajustados al estilo oscuro de Stairway)
+// 1. Fondos Globales
 .highlight-area {
   background-color: #0a0a0a;
   background-image: radial-gradient(circle at center, #1a1a1a 0%, #0d0d0d 40%, #050505 100%);
@@ -18,26 +18,30 @@
 h1 { text-align: center; color: #D4AF37; }
 p { font-size: 1.1em; color: rgba(255, 255, 255, 0.8); }
 
+// 3. Scroll Suave para Landing Page
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Ajuste para navbar fijo */
+}
 
+body {
+  padding-top: 80px;
+}
 
 // 4. Componentes de Tarjetas (The Stairway Look) 💎
-.card-stairway, .icon-box {
+.card-stairway, .icon-box, .card-identity {
   background: rgba(255, 255, 255, 0.03) !important;
   border: 1px solid rgba(212, 175, 55, 0.1) !important;
   transition: all 0.3s ease-in-out;
-  border-radius: 1rem; // Equivale a rounded-4
+  border-radius: 1rem;
 
-  .card-title {
-    color: #D4AF37;
-  }
-
+  .card-title { color: #D4AF37; }
   .card-text {
     color: rgba(255, 255, 255, 0.7) !important;
     font-size: 0.95rem;
     line-height: 1.6;
   }
 
-  // Animación unificada de elevación
   &:hover {
     transform: translateY(-10px);
     border-color: rgba(212, 175, 55, 0.4) !important;
@@ -46,49 +50,20 @@ p { font-size: 1.1em; color: rgba(255, 255, 255, 0.8); }
   }
 }
 
-// 5. Botones Sociales Personalizados 📱
+// 5. Botones Sociales
 .social-btn {
-  width: 45px;
-  height: 45px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  margin: 0 8px;
-  font-size: 1.2rem;
+  width: 45px; height: 45px; display: inline-flex;
+  align-items: center; justify-content: center;
+  border-radius: 50%; margin: 0 8px; font-size: 1.2rem;
   transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  color: white;
-  text-decoration: none;
+  color: white; text-decoration: none;
 
-  &:hover {
-    transform: scale(1.2);
-    color: white;
-    filter: brightness(1.1);
-  }
-
+  &:hover { transform: scale(1.2); color: white; filter: brightness(1.1); }
   &.btn-linkedin { background-color: #0077b5; }
   &.btn-instagram { background-color: #e4405f; }
   &.btn-facebook { background-color: #1877f2; }
   &.btn-github { background-color: #333; }
 }
 
-// 6. Utilidades de Texto y Otros
-.text-muted-stairway {
-  color: rgba(255, 255, 255, 0.6) !important;
-}
-
-.portada-image {
-  width: 100%;
-  height: auto;
-  display: block;
-  max-width: 800px;
-}
-
-// Color oro personalizado para elementos sueltos
-.text-gold {
-  color: #D4AF37 !important;
-}
-
-body {
-  padding-top: 100px; /* Para no chocar con el navbar */
-}
+.text-muted-stairway { color: rgba(255, 255, 255, 0.6) !important; }
+.text-gold { color: #D4AF37 !important; }

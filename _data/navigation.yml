@@ -1,13 +1,8 @@
-- name: Servicios
-  link: "#"
-  subcategories:
-    - name: Software & Desarrollo Web
-      link: /web-design/
-    - name: Identidad de Marca
-      link: /branding/
-    - name: Servicios Complementarios
-      link: /services/
+- name: Precios
+  link: "/#planes-promo"
+- name: Branding
+  link: "/#servicios-complementarios"
 - name: Quiénes Somos
-  link: /about/
+  link: "/about/"
 - name: Blog
-  link: /blog/
+  link: "/blog/"
