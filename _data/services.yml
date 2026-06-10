@@ -4,7 +4,7 @@ web:
     subtitulo: "Presencia Digital Rápida"
     precio_clp: "49.990"
     pago_texto: "Pago Único o"
-    suscripcion_clp: "12.990"
+    suscripcion_clp: "12.000"
     suscripcion_texto: "Suscripción Mensual"
     estilo: "bg-light"
     items:
@@ -23,7 +23,7 @@ web:
     subtitulo: "Catálogo & Web App (PWA)"
     precio_clp: "69.990"
     pago_texto: "Pago Único o"
-    suscripcion_clp: "14.990"
+    suscripcion_clp: "15.000"
     suscripcion_texto: "Suscripción Mensual"
     badge: "Ideal Restaurantes & Delivery"
     estilo: "bg-dark text-white"
